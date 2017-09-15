@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: 
-ms.openlocfilehash: 1dba0bdd9b543c11b31f3001737038e7e99daf08
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 000397b573700aa92572a6252b6d84da8945a1e5
+ms.sourcegitcommit: 79afc8a1b427e26ecea7bdc0b7b3c898f143360f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>使用適用於 Python 的 Azure 管理程式庫來進行驗證
 
@@ -122,6 +122,7 @@ client = ComputeManagementClient(credentials, subscription_id)
 >     base_url=AZURE_CHINA_CLOUD.endpoints.active_directory_resource_id)
 > ```
 
+
 ## <a name="mgmt-auth-file"></a>檔案型驗證
 
 最簡單的驗證方式就是建立 JSON 檔，其中包含適用於 Azure 服務主體的認證。 您可以使用下列 CLI 命令，同時建立新的服務主體和這個檔案：
@@ -161,6 +162,31 @@ from azure.mgmt.compute import ComputeManagementClient
 client = get_client_from_auth_file(ComputeManagementClient)
 ```
 
+## <a name="mgmt-auth-msi"></a>使用受管理服務身分識別 (MSI) 
+MSI 是一種簡單的方法，讓 Azure 中的資源可以在無需建立特定認證的情況下，使用 SDK/CLI。
+
+```python
+from msrestazure.azure_active_directory import MSIAuthentication
+from azure.mgmt.resource import ResourceManagementClient, SubscriptionClient
+
+    # Create MSI Authentication
+    credentials = MSIAuthentication()
+
+
+    # Create a Subscription Client
+    subscription_client = SubscriptionClient(credentials)
+    subscription = next(subscription_client.subscriptions.list())
+    subscription_id = subscription.subscription_id
+
+    # Create a Resource Management client
+    resource_client = ResourceManagementClient(credentials, subscription_id)
+
+    
+    # List resource groups as an example. The only limit is what role and policy are assigned to this MSI token.
+    for resource_group in resource_client.resource_groups.list():
+        print(resource_group.name)
+
+```
 
 ## <a name="mgmt-auth-cli"></a>CLI 型驗證
 
