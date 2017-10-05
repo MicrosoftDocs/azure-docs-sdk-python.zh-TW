@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: 4154367f0449b174790ee3f3c9480ca0bceeea87
-ms.sourcegitcommit: c6d9500492131bf782488fcafc7c5c41c2703e92
+ms.openlocfilehash: ca1af18ae37549238ffaafbd2d5f8223974e0d11
+ms.sourcegitcommit: 12ea38af93cc4f1ba6aac333035829a69f6aed0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="managed-disks"></a>受控磁碟
 
@@ -129,7 +129,7 @@ async_update.wait()
 
 ## <a name="virtual-machine-scale-sets-with-managed-disks"></a>使用受控磁碟的虛擬機器擴展集
 
-在管理磁碟之前，您必須針對擴展集內需要的所有 VM，以手動方式建立儲存體帳戶，然後使用 list 參數 ``vhd_containers`` 向擴展集 RestAPI 提供所有儲存體帳戶名稱。 可在此 `article <https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`__ 中取得官方轉換指南。
+在管理磁碟之前，您必須針對擴展集內需要的所有 VM，以手動方式建立儲存體帳戶，然後使用 list 參數 ``vhd_containers`` 向擴展集 RestAPI 提供所有儲存體帳戶名稱。 可在 `<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`__ 文章中取得官方轉換指南。
 
 現在透過受控磁碟，您就完全不需要管理任何儲存體帳戶。 如果您習慣使用 VMSS Python SDK，``storage_profile`` 現在可以與建立 VM 時所用的完全相同：
 
