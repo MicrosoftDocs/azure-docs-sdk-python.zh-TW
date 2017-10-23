@@ -68,9 +68,9 @@ sections:
             title: 使用 Cosmos DB 建置 Web 應用程式
             href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-python'
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/DataLakeStore.svg'
-            title: 管理 Azure Data Lake Analytics
-            href: 'https://docs.microsoft.com//azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk'
+              src: 'https://docs.microsoft.com/azure/media/index/MachineLearning.svg'
+            title: Azure Notebooks 的資料科學
+            href: 'https://notebooks.azure.com/liwong/libraries/iris1234'
   - title: 範例
     items:
       - type: list
