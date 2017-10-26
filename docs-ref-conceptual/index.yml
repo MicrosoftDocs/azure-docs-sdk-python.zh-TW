@@ -70,7 +70,7 @@ sections:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/MachineLearning.svg'
             title: Azure Notebooks 的資料科學
-            href: 'https://notebooks.azure.com/liwong/libraries/iris1234'
+            href: 'https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb'
   - title: 範例
     items:
       - type: list
