@@ -1,0 +1,7 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+    - name: 適用於 Python 開發人員的 Azure
+      tocHref: /python/azure/
+      topicHref: /python/azure/index
