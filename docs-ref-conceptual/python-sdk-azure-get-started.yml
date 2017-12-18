@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "開始使用適用於 Python 的 Azure 程式庫進行雲端開發"
 metadata:
@@ -9,14 +10,14 @@ metadata:
   nextTutorialTitle: "Python SDK 參考"
   displayType: two-column
   interactive: azurecli
+  ms.openlocfilehash: 103dd9fa8307f8f71eab6d219e8a2dad28ba94f0
+  ms.sourcegitcommit: 932b476b0f0c4c6613a4bdc1b0b96e6ce4ba8fcb
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 12/14/2017
 items:
 - durationInMinutes: 
   content: "本指南會示範適用於 Python 的幾個 Azure 程式庫使用方式。  \n"
-  ms.openlocfilehash: 38b8fdd9f83dfd096c8efcac8d73fe254dd35326
-  ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
-  ms.translationtype: HT
-  ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/05/2017
 - title: "必要條件"
   durationInMinutes: 5
   content: "- 一個 Azure 帳戶。 如果您沒有帳戶，請[取得免費試用帳戶](https://azure.microsoft.com/free/)。\n- [Python](https://www.python.org/downloads/)\n- [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 或 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)。\n"
@@ -25,7 +26,7 @@ items:
   content: "> [!IMPORTANT]\n> 這應該用來作為快速入門開發人員的體驗。 若要用於生產環境，請使用 [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) 或您自己的認證系統。\n> 對 CLI 設定的任何變更都會影響 SDK 執行。\n\nSDK 能夠使用 CLI 使用中訂用帳戶來建立用戶端。\n\n若要定義使用中的認證，請使用 [az 登入](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)。\n預設訂用帳戶識別碼是您所擁有的唯一一個，或是可以使用 [az 帳戶](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli)加以定義。\n\n```python\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.compute import ComputeManagementClient\n\nclient = get_client_from_cli_profile(ComputeManagementClient)\n```\n"
 - title: "建立虛擬環境"
   durationInMinutes: 5
-  content: "> [!IMPORTANT]\n> 建立虛擬環境是選擇性的，但強烈建議您這麼做。\n\n在 Bash 中建立虛擬環境 (Linux 或[適用於 Windows 的 Bash](https://msdn.microsoft.com/commandline/wsl/about))：\n```bash\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\nsource ./bin/activate\n```\n\n在 Powershell 中建立虛擬環境：\n```powershell\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\n.\\Scripts\\activate\n```\n"
+  content: "> [!IMPORTANT]\n> 建立虛擬環境是選擇性的，但強烈建議您這麼做。\n\n在 Bash 中建立虛擬環境 (Linux 或[適用於 Windows 的 Bash](https://msdn.microsoft.com/commandline/wsl/about))：\n```bash\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\nsource ./bin/activate\n```\n\n在 PowerShell 中建立虛擬環境：\n```powershell\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\n.\\Scripts\\activate\n```\n"
 - title: "建立 Linux 虛擬機器"
   durationInMinutes: 5
   content: "此程式碼會在美國東部 Azure 區域執行的 `sampleVmResourceGroup` 資源群組中，建立名為 `testLinuxVM` 的新 Linux VM。\n\n驗證：\n```azcli\naz login\n```\n建立資源群組：\n```azurecli-interactive\naz group create -l eastus --n sampleVmResourceGroup\n```\n\n建立虛擬網路和子網路：\n```azurecli-interactive\naz network vnet create -g sampleVmResourceGroup -n azure-sample-vnet --address-prefix 10.0.0.0/16 --subnet-name azure-sample-subnet --subnet-prefix 10.0.0.0/24\n```\n\n建立公用 IP 位址：\n```azurecli-interactive\naz network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv6\n```\n建立網路介面用戶端：\n```azurecli-interactive\naz network nic create -g sampleVmResourceGroup --vnet-name azure-sample-vnet --subnet azure-sample-subnet -n azure-sample-nic --public-ip-address azure-sample-ip\n```\n\n```python\nfrom azure.mgmt.network import NetworkManagementClient\nfrom azure.mgmt.compute import ComputeManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\n\n# Azure Datacenter\nLOCATION = 'eastus'\n\n# Resource Group\nGROUP_NAME = 'sampleVmResourceGroup'\n\n# Network\nVNET_NAME = 'azure-sample-vnet'\nSUBNET_NAME = 'azure-sample-subnet'\n\n# VM\nNIC_NAME = 'azure-sample-nic'\nVM_NAME = 'testLinuxVM'\n\nUSERNAME = 'userlogin'\nPASSWORD = 'Pa$$w0rd91'\n\nIP_ADDRESS_NAME='azure-sample-ip'\n\nVM_REFERENCE = {\n    'linux': {\n        'publisher': 'Canonical',\n        'offer': 'UbuntuServer',\n        'sku': '16.04.0-LTS',\n        'version': 'latest'\n    },\n    'windows': {\n        'publisher': 'MicrosoftWindowsServerEssentials',\n        'offer': 'WindowsServerEssentials',\n        'sku': 'WindowsServerEssentials',\n        'version': 'latest'\n    }\n}\n\n\ndef run_example():\n\n    compute_client = get_client_from_cli_profile(ComputeManagementClient)\n    network_client = get_client_from_cli_profile(NetworkManagementClient)\n\n    # get nic id\n    nic = network_client.network_interfaces.get(GROUP_NAME, NIC_NAME)\n\n    # Create Linux VM\n    print('\\nCreating Linux Virtual Machine')\n    vm_parameters = create_vm_parameters(nic.id, VM_REFERENCE['linux'])\n    print(vm_parameters)\n    async_vm_creation = compute_client.virtual_machines.create_or_update(\n        GROUP_NAME, VM_NAME, vm_parameters)\n    async_vm_creation.wait()\n\n\ndef create_vm_parameters(nic_id, vm_reference):\n    \"\"\"Create the VM parameters structure.\n    \"\"\"\n    return {\n        'location': LOCATION,\n        'os_profile': {\n            'computer_name': VM_NAME,\n            'admin_username': USERNAME,\n            'admin_password': PASSWORD\n        },\n        'hardware_profile': {\n            'vm_size': 'Standard_DS1_v2'\n        },\n        'storage_profile': {\n            'image_reference': {\n                'publisher': vm_reference['publisher'],\n                'offer': vm_reference['offer'],\n                'sku': vm_reference['sku'],\n                'version': vm_reference['version']\n            },\n        },\n        'network_profile': {\n            'network_interfaces': [{\n                'id': nic_id,\n            }]\n        },\n    }\n\n\nif __name__ == \"__main__\":\n    run_example()\n```\n\n當程式完成時，請使用 Azure CLI 2.0 在訂用帳戶中確認虛擬機器：\n\n```azurecli-interactive\naz vm list --resource-group sampleVmResourceGroup\n```\n\n在確認程式碼有效後，請使用 CLI 來刪除 VM 和其資源。\n\n```azurecli-interactive\naz group delete --name sampleVmResourceGroup\n```\n"
