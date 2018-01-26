@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: storage
-ms.openlocfilehash: 64465964d32934a6a45dec44cb92a0a8a84b9c37
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: e00e821ff3e806a994fa8d96aae50c35eeeb8392
+ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="azure-storage-libraries-for-python"></a>適用於 Python 的 Azure 儲存體程式庫
 
@@ -31,8 +31,10 @@ ms.lasthandoff: 08/18/2017
 
 ### <a name="client"></a>用戶端
 
+Azure 儲存體用戶端程式庫由 4 個套件組成，分別是：Blob、檔案、訂列和資料表。 若要安裝 Blob 套件，請執行：
+
 ```bash
-pip install azure-storage
+pip install azure-storage-blob
 ```
 
 ### <a name="management"></a>管理
@@ -43,8 +45,7 @@ pip install azure-mgmt-storage
 
 ## <a name="example"></a>範例
 ```python
-storage_client = CloudStorageAccount(storage_account_name, storage_key)
-blob_service = storage_client.create_block_blob_service()
+blob_service = BlockBlobService(account_name, account_key)
 
 blob_service.create_container(
     'mycontainername',
@@ -65,8 +66,8 @@ print(blob_service.make_blob_url('mycontainername', 'myblobname'))
 
 | | |
 |--|--|
-| [在 Python 中開始使用 Azure Blob 儲存體](https://azure.microsoft.com/resources/samples/storage-blob-python-getting-started/) | 在 Azure 儲存體中建立、讀取、更新、限制存取，並刪除檔案和物件。 |
-| [在 Python 中開始使用 Azure 佇列儲存體](https://azure.microsoft.com/resources/samples/storage-queue-python-getting-started/) | 從 Azure 儲存體佇列中插入、查看、擷取並刪除訊息。 | 
+| [在 Python 中開始使用 Azure Blob 儲存體](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-python-how-to-use-blob-storage) | 在 Azure 儲存體中建立、讀取、更新、限制存取，並刪除檔案和物件。 |
+| [在 Python 中開始使用 Azure 佇列儲存體](https://docs.microsoft.com/en-us/azure/storage/queues/storage-python-how-to-use-queue-storage) | 從 Azure 儲存體佇列中插入、查看、擷取並刪除訊息。 | 
 | [管理 Azure 儲存體帳戶](https://azure.microsoft.com/resources/samples/storage-python-manage) | 建立、更新和刪除儲存體帳戶。 取出和重新產生儲存體帳戶存取金鑰。
 
 深入探索可在應用程式中使用的 [Python 程式碼範例](https://azure.microsoft.com/resources/samples/?platform=python)。
