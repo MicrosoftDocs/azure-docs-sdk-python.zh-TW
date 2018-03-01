@@ -11,16 +11,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: a50a203a0733f25f2a88d6f4a43c6bddc388d3e7
-ms.sourcegitcommit: 79afc8a1b427e26ecea7bdc0b7b3c898f143360f
+ms.openlocfilehash: 299b50ce8366d0c49ade28dfece98d6696a4f9ef
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="event-grid-libraries-for-python"></a>適用於 Python 的 Event Grid 程式庫
 
 ## <a name="overview"></a>概觀
-Azure Event Grid 是完全受管的智慧型事件路由服務，可讓統一事件耗用量使用發佈-訂閱模型。
+Azure Event Grid 是完全受控的智慧型事件路由服務，可讓統一事件耗用量使用發佈-訂閱模型。
 
 ## <a name="management-api"></a>管理 API
 ```bash
@@ -85,5 +85,5 @@ az group delete --name gridResourceGroup
 ```
 
 > [!div class="nextstepaction"]
-> [探索管理 API](/python/api/overview/azure/eventgrid/managementlibrary)
+> [探索管理 API](/python/api/overview/azure/eventgrid/management)
 

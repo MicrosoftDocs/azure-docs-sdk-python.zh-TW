@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: c4128dae1c1fd47d2ac34b178b7e1031aa14c948
-ms.sourcegitcommit: 1229121faaae8536a7d8cc89cddd24abf1e30cb8
+ms.openlocfilehash: adea3dfd1e38fb8c880009d5a02ab2b8be2a67e1
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 虛擬機器程式庫
 
@@ -37,7 +37,7 @@ pip install azure-mgmt-compute
 
 ### <a name="example"></a>範例
 
-在現有的 Azure 資源群組中，使用受管理服務身分識別 (MSI) 驗證建立新的 Linux 虛擬機器。
+在現有的 Azure 資源群組中，使用受控服務身分識別 (MSI) 驗證建立新的 Linux 虛擬機器。
 
 ```python
 VM_PARAMETERS={
@@ -71,13 +71,15 @@ def create_vm()
 ```
 
 > [!div class="nextstepaction"]
-> [探索管理 API](/python/api/overview/azure/virtualmachines/managementlibrary)
+> [探索管理 API](/python/api/overview/azure/virtualmachines/management)
 
 ## <a name="samples"></a>範例
 
 * [管理虛擬機器][1]
-* [使用受管理服務身分識別進行驗證][2]
-* [使用受管理的服務識別延伸模組來建立虛擬機器][3]
+* 
+            [使用受控服務身分識別進行驗證][2]
+* 
+            [使用受控服務識別延伸模組來建立虛擬機器][3]
 * [管理負載平衡器][4]
 * [建立及設定受控磁碟][5]
 * [列出映像][6] 
