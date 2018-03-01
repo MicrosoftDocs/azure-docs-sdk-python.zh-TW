@@ -11,31 +11,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: batch
-ms.openlocfilehash: f954499888cbc3dfe4793a3e769b85ceb5de71d2
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: de5f3a98b1712ff9bdcc417daf10719178819364
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="azure-batch-libraries-for-python"></a><span data-ttu-id="10b59-104">適用於 Python 的 Azure Batch 程式庫</span><span class="sxs-lookup"><span data-stu-id="10b59-104">Azure Batch libraries for python</span></span>
+# <a name="azure-batch-libraries-for-python"></a><span data-ttu-id="920f1-104">適用於 Python 的 Azure Batch 程式庫</span><span class="sxs-lookup"><span data-stu-id="920f1-104">Azure Batch libraries for python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="10b59-105">概觀</span><span class="sxs-lookup"><span data-stu-id="10b59-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="920f1-105">概觀</span><span class="sxs-lookup"><span data-stu-id="920f1-105">Overview</span></span>
 
-<span data-ttu-id="10b59-106">使用 [Azure Batch](/azure/batch/batch-technical-overview) 在雲端有效地執行大規模的平行和高效能計算應用程式。</span><span class="sxs-lookup"><span data-stu-id="10b59-106">Run large-scale parallel and high-performance computing applications efficiently in the cloud with [Azure Batch](/azure/batch/batch-technical-overview).</span></span>   
+<span data-ttu-id="920f1-106">使用 [Azure Batch](/azure/batch/batch-technical-overview) 在雲端有效地執行大規模的平行和高效能計算應用程式。</span><span class="sxs-lookup"><span data-stu-id="920f1-106">Run large-scale parallel and high-performance computing applications efficiently in the cloud with [Azure Batch](/azure/batch/batch-technical-overview).</span></span>   
 
-<span data-ttu-id="10b59-107">若要開始使用 Azure Batch，請參閱[使用 Azure 入口網站建立 Batch 帳戶](/azure/batch/batch-account-create-portal)。</span><span class="sxs-lookup"><span data-stu-id="10b59-107">To get started with Azure Batch, see [Create a Batch account with the Azure portal](/azure/batch/batch-account-create-portal).</span></span>
+<span data-ttu-id="920f1-107">若要開始使用 Azure Batch，請參閱[使用 Azure 入口網站建立 Batch 帳戶](/azure/batch/batch-account-create-portal)。</span><span class="sxs-lookup"><span data-stu-id="920f1-107">To get started with Azure Batch, see [Create a Batch account with the Azure portal](/azure/batch/batch-account-create-portal).</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="10b59-108">安裝程式庫</span><span class="sxs-lookup"><span data-stu-id="10b59-108">Install the libraries</span></span>
+## <a name="install-the-libraries"></a><span data-ttu-id="920f1-108">安裝程式庫</span><span class="sxs-lookup"><span data-stu-id="920f1-108">Install the libraries</span></span>
 
-## <a name="client-library"></a><span data-ttu-id="10b59-109">用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="10b59-109">Client library</span></span>
-<span data-ttu-id="10b59-110">Azure Batch 用戶端程式庫可讓您設定計算節點和集區、定義工作並將其設定為在作業中執行，以及設定作業管理員以控制和監控作業的執行。</span><span class="sxs-lookup"><span data-stu-id="10b59-110">The Azure Batch client libraries let you configure compute nodes and pools, define tasks and configure them to run in jobs, and set up a job manager to control and monitor job execution.</span></span> <span data-ttu-id="10b59-111">[深入了解](/azure/batch/batch-api-basics)如何使用這些物件以執行大規模的平行計算解決方案。</span><span class="sxs-lookup"><span data-stu-id="10b59-111">[Learn more](/azure/batch/batch-api-basics) about using these objects to run large-scale parallel compute solutions.</span></span>
+## <a name="client-library"></a><span data-ttu-id="920f1-109">用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="920f1-109">Client library</span></span>
+<span data-ttu-id="920f1-110">Azure Batch 用戶端程式庫可讓您設定計算節點和集區、定義工作並將其設定為在作業中執行，以及設定作業管理員以控制和監控作業的執行。</span><span class="sxs-lookup"><span data-stu-id="920f1-110">The Azure Batch client libraries let you configure compute nodes and pools, define tasks and configure them to run in jobs, and set up a job manager to control and monitor job execution.</span></span> <span data-ttu-id="920f1-111">[深入了解](/azure/batch/batch-api-basics)如何使用這些物件以執行大規模的平行計算解決方案。</span><span class="sxs-lookup"><span data-stu-id="920f1-111">[Learn more](/azure/batch/batch-api-basics) about using these objects to run large-scale parallel compute solutions.</span></span>
 
 ```bash
 pip install azure-batch
 ```
-### <a name="example"></a><span data-ttu-id="10b59-112">範例</span><span class="sxs-lookup"><span data-stu-id="10b59-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="920f1-112">範例</span><span class="sxs-lookup"><span data-stu-id="920f1-112">Example</span></span>
 
-<span data-ttu-id="10b59-113">在 Batch 帳戶中設定 Linux 計算節點集區：</span><span class="sxs-lookup"><span data-stu-id="10b59-113">Set up a pool of Linux compute nodes in a batch account:</span></span>
+<span data-ttu-id="920f1-113">在 Batch 帳戶中設定 Linux 計算節點集區：</span><span class="sxs-lookup"><span data-stu-id="920f1-113">Set up a pool of Linux compute nodes in a batch account:</span></span>
 
 ```python
 # create the batch client for an account using its URI and keys
@@ -57,17 +57,17 @@ new_pool.virtual_machine_configuration = vmc
 client.pool.add(new_pool)
 ```
 
-## <a name="management-api"></a><span data-ttu-id="10b59-114">管理 API</span><span class="sxs-lookup"><span data-stu-id="10b59-114">Management API</span></span>
-<span data-ttu-id="10b59-115">使用 Azure Batch 管理程式庫來建立和刪除 Batch 帳戶、讀取和重新產生 Batch 帳戶金鑰，以及管理 Batch 帳戶的儲存體。</span><span class="sxs-lookup"><span data-stu-id="10b59-115">Use the Azure Batch management libraries to create and delete batch accounts, read and regenerate batch account keys, and manage batch account storage.</span></span>
+## <a name="management-api"></a><span data-ttu-id="920f1-114">管理 API</span><span class="sxs-lookup"><span data-stu-id="920f1-114">Management API</span></span>
+<span data-ttu-id="920f1-115">使用 Azure Batch 管理程式庫來建立和刪除 Batch 帳戶、讀取和重新產生 Batch 帳戶金鑰，以及管理 Batch 帳戶的儲存體。</span><span class="sxs-lookup"><span data-stu-id="920f1-115">Use the Azure Batch management libraries to create and delete batch accounts, read and regenerate batch account keys, and manage batch account storage.</span></span>
 
 ```bash
 pip install azure-mgmt-batch
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="10b59-116">探索用戶端 API</span><span class="sxs-lookup"><span data-stu-id="10b59-116">Explore the Client APIs</span></span>](/python/api/overview/azure/batch/clientlibrary)
+> [<span data-ttu-id="920f1-116">探索用戶端 API</span><span class="sxs-lookup"><span data-stu-id="920f1-116">Explore the Client APIs</span></span>](/python/api/overview/azure/batch/client)
 
-### <a name="example"></a><span data-ttu-id="10b59-117">範例</span><span class="sxs-lookup"><span data-stu-id="10b59-117">Example</span></span>
-<span data-ttu-id="10b59-118">建立 Azure Batch 帳戶，並為其設定新的應用程式和 Azure 儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="10b59-118">Create an Azure Batch account and configure a new application and Azure storage account for it.</span></span>
+### <a name="example"></a><span data-ttu-id="920f1-117">範例</span><span class="sxs-lookup"><span data-stu-id="920f1-117">Example</span></span>
+<span data-ttu-id="920f1-118">建立 Azure Batch 帳戶，並為其設定新的應用程式和 Azure 儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="920f1-118">Create an Azure Batch account and configure a new application and Azure storage account for it.</span></span>
 
 ```python
 from azure.mgmt.batch import BatchManagementClient
@@ -105,4 +105,4 @@ creating.wait()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="10b59-119">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="10b59-119">Explore the Management APIs</span></span>](/python/api/overview/azure/batch/managementlibrary)
+> [<span data-ttu-id="920f1-119">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="920f1-119">Explore the Management APIs</span></span>](/python/api/overview/azure/batch/management)

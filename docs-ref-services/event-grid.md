@@ -11,24 +11,24 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: a50a203a0733f25f2a88d6f4a43c6bddc388d3e7
-ms.sourcegitcommit: 79afc8a1b427e26ecea7bdc0b7b3c898f143360f
+ms.openlocfilehash: 299b50ce8366d0c49ade28dfece98d6696a4f9ef
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="event-grid-libraries-for-python"></a><span data-ttu-id="3b18f-103">適用於 Python 的 Event Grid 程式庫</span><span class="sxs-lookup"><span data-stu-id="3b18f-103">Event Grid libraries for Python</span></span>
+# <a name="event-grid-libraries-for-python"></a><span data-ttu-id="3c936-103">適用於 Python 的 Event Grid 程式庫</span><span class="sxs-lookup"><span data-stu-id="3c936-103">Event Grid libraries for Python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="3b18f-104">概觀</span><span class="sxs-lookup"><span data-stu-id="3b18f-104">Overview</span></span>
-<span data-ttu-id="3b18f-105">Azure Event Grid 是完全受管的智慧型事件路由服務，可讓統一事件耗用量使用發佈-訂閱模型。</span><span class="sxs-lookup"><span data-stu-id="3b18f-105">Azure Event Grid is a fully-managed intelligent event routing service that allows for uniform event consumption using a publish-subscribe model.</span></span>
+## <a name="overview"></a><span data-ttu-id="3c936-104">概觀</span><span class="sxs-lookup"><span data-stu-id="3c936-104">Overview</span></span>
+<span data-ttu-id="3c936-105">Azure Event Grid 是完全受控的智慧型事件路由服務，可讓統一事件耗用量使用發佈-訂閱模型。</span><span class="sxs-lookup"><span data-stu-id="3c936-105">Azure Event Grid is a fully-managed intelligent event routing service that allows for uniform event consumption using a publish-subscribe model.</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="3b18f-106">管理 API</span><span class="sxs-lookup"><span data-stu-id="3b18f-106">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="3c936-106">管理 API</span><span class="sxs-lookup"><span data-stu-id="3c936-106">Management API</span></span>
 ```bash
 pip install azure-mgmt-eventgrid
 ```
 
-### <a name="example"></a><span data-ttu-id="3b18f-107">範例</span><span class="sxs-lookup"><span data-stu-id="3b18f-107">Example</span></span>
-<span data-ttu-id="3b18f-108">下列項目可建立自訂主題、訂閱主題，並觸發事件以檢視結果。</span><span class="sxs-lookup"><span data-stu-id="3b18f-108">The following creates a custom topic, subscribes to the topic, and triggers the event to view the result.</span></span> <span data-ttu-id="3b18f-109">RequestBin 是一個開放原始碼的第三方工具，可讓您建立端點，以及檢視傳送給它的要求。</span><span class="sxs-lookup"><span data-stu-id="3b18f-109">RequestBin is an open source, third-party tool that enables you to create an endpoint, and view requests that are sent to it.</span></span> <span data-ttu-id="3b18f-110">移至 [RequestBin](https://requestb.in/)，然後按一下 [建立 RequestBin]。</span><span class="sxs-lookup"><span data-stu-id="3b18f-110">Go to [RequestBin](https://requestb.in/), and click **Create a RequestBin**.</span></span> <span data-ttu-id="3b18f-111">複製 bin URL，因為您在訂閱主題時需要用到它。</span><span class="sxs-lookup"><span data-stu-id="3b18f-111">Copy the bin URL, because you need it when subscribing to the topic.</span></span>
+### <a name="example"></a><span data-ttu-id="3c936-107">範例</span><span class="sxs-lookup"><span data-stu-id="3c936-107">Example</span></span>
+<span data-ttu-id="3c936-108">下列項目可建立自訂主題、訂閱主題，並觸發事件以檢視結果。</span><span class="sxs-lookup"><span data-stu-id="3c936-108">The following creates a custom topic, subscribes to the topic, and triggers the event to view the result.</span></span> <span data-ttu-id="3c936-109">RequestBin 是一個開放原始碼的第三方工具，可讓您建立端點，以及檢視傳送給它的要求。</span><span class="sxs-lookup"><span data-stu-id="3c936-109">RequestBin is an open source, third-party tool that enables you to create an endpoint, and view requests that are sent to it.</span></span> <span data-ttu-id="3c936-110">移至 [RequestBin](https://requestb.in/)，然後按一下 [建立 RequestBin]。</span><span class="sxs-lookup"><span data-stu-id="3c936-110">Go to [RequestBin](https://requestb.in/), and click **Create a RequestBin**.</span></span> <span data-ttu-id="3c936-111">複製 bin URL，因為您在訂閱主題時需要用到它。</span><span class="sxs-lookup"><span data-stu-id="3c936-111">Copy the bin URL, because you need it when subscribing to the topic.</span></span>
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient
@@ -77,13 +77,13 @@ r = requests.post(url, data=s, headers=headers)
 print(r.status_code)
 print(r.content)
 ```
-<span data-ttu-id="3b18f-112">瀏覽至先前所建立的 RequestBin URL 可看到剛傳送的事件。</span><span class="sxs-lookup"><span data-stu-id="3b18f-112">Browse to the RequestBin URL created earlier to see the event just sent.</span></span>
+<span data-ttu-id="3c936-112">瀏覽至先前所建立的 RequestBin URL 可看到剛傳送的事件。</span><span class="sxs-lookup"><span data-stu-id="3c936-112">Browse to the RequestBin URL created earlier to see the event just sent.</span></span>
 
-<span data-ttu-id="3b18f-113">清除資源</span><span class="sxs-lookup"><span data-stu-id="3b18f-113">Clean up resources</span></span>
+<span data-ttu-id="3c936-113">清除資源</span><span class="sxs-lookup"><span data-stu-id="3c936-113">Clean up resources</span></span>
 ```azurecli-interactive
 az group delete --name gridResourceGroup
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="3b18f-114">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="3b18f-114">Explore the Management APIs</span></span>](/python/api/overview/azure/eventgrid/managementlibrary)
+> [<span data-ttu-id="3c936-114">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="3c936-114">Explore the Management APIs</span></span>](/python/api/overview/azure/eventgrid/management)
 
