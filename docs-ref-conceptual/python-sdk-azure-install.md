@@ -11,13 +11,32 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 5ce4ef27667d45697200eef67be92c62812b3809
-ms.sourcegitcommit: 66e112df9be660354e23955b0adf3efd784ba739
+ms.openlocfilehash: 792feac12f8328e2467017530065350e347c59b7
+ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="installation"></a>安裝
+
+## <a name="which-python-and-which-version-to-use"></a>該使用哪個 Python 和哪個版本
+可用的 Python 解譯器有數種，範例包括：
+
+* CPython - 標準和最常見的 Python 解譯器
+* PyPy - CPython 的快速、相容替代實作
+* IronPython - 可在 .Net/CLR 上執行的 Python 解譯器
+* Jython - 可在「Java 虛擬機器」上執行的 Python 解譯器
+
+**CPython** v2.7 或 v3.4+ 及 PyPy 5.4.0 已針對 Python Azure SDK 進行過測試並確定支援。
+
+## <a name="where-to-get-python"></a>可在哪裡取得 Python？
+取得 CPython 的方法有數種：
+
+* 直接從 [Python](https://www.python.org/) 取得
+* 從信譽良好的散發版本取得，例如 [Anaconda](https://www.anaconda.com/)、[Enthought](https://www.enthought.com/) 或 [ActiveState](https://www.activestate.com/)
+* 從原始碼組建！
+
+除非您有特定的需求，否則我們建議您採用前兩個選項。
 
 ## <a name="installation-with-pip"></a>使用 pip 進行安裝
 
