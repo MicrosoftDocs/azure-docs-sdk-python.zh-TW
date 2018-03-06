@@ -4,7 +4,7 @@
     - name: 概觀
       href: python-sdk-azure-overview.md
     - name: 安裝
-      href: /azure/python-how-to-install
+      href: python-sdk-azure-install.md
     - name: 工具
       href: python-azure-tools.md
     - name: 開始使用 Python 模組
@@ -35,3 +35,5 @@
           href: python-sdk-azure-sql-database-samples.md
         - name: 所有 Python 範例
           href: 'https://azure.microsoft.com/resources/samples/?platform=python'
+    - name: 多重雲端
+      href: python-sdk-azure-multi-cloud.md
