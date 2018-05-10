@@ -1,20 +1,20 @@
 ---
-title: "受控磁碟"
-description: "建立、調整大小並更新受控磁碟。"
+title: 受控磁碟
+description: 建立、調整大小並更新受控磁碟。
 author: lisawong19
 manager: douge
-ms.assetid: 
+ms.assetid: ''
 ms.devlang: python
 ms.topic: article
 ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: 1dceb1b2fe700904b530f1834f0338f7d5e61999
-ms.sourcegitcommit: 3e477d608bbb41f0c561c88e4c665013e3008c26
+ms.openlocfilehash: 733bd0ffce6ddb10219dae40bad6ea54e1efcd70
+ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="managed-disks"></a>受控磁碟
 
@@ -22,7 +22,7 @@ Azure 受控磁碟和擴展集中的 1000 個現在已[上市](https://azure.mic
 
 
 
-從開發人員的觀點而言，Azure CLI 中的受控磁碟體驗是其他跨平台工具的 CLI 體驗之慣用語。 您可以使用 [Azure Python](https://azure.microsoft.com/develop/python/) SDK 和 [azure-mgmt-compute 套件 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) 來管理受控磁碟。 您可以使用此[教學課程](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagementcomputenetwork.html)來建立計算用戶端。
+從開發人員的觀點而言，Azure CLI 中的受控磁碟體驗是其他跨平台工具的 CLI 體驗之慣用語。 您可以使用 [Azure Python](https://azure.microsoft.com/develop/python/) SDK 和 [azure-mgmt-compute 套件 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) 來管理受控磁碟。 您可以使用此[教學課程](https://docs.microsoft.com/python/api/overview/azure/virtualmachines?view=azure-python)來建立計算用戶端。
 
 
 ## <a name="standalone-managed-disks"></a>獨立的受控磁碟
@@ -129,7 +129,7 @@ async_update.wait()
 
 ## <a name="virtual-machine-scale-sets-with-managed-disks"></a>使用受控磁碟的虛擬機器擴展集
 
-在管理磁碟之前，您必須針對擴展集內需要的所有 VM，以手動方式建立儲存體帳戶，然後使用 list 參數 ``vhd_containers`` 向擴展集 RestAPI 提供所有儲存體帳戶名稱。 可在 `<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>` 文章中取得官方轉換指南。
+在受控磁碟之前，您必須針對擴展集內需要的所有 VM，以手動方式建立儲存體帳戶，然後使用 list 參數 ``vhd_containers`` 向擴展集 RestAPI 提供所有儲存體帳戶名稱。 可在 `<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>` 文章中取得官方轉換指南。
 
 現在透過受控磁碟，您就完全不需要管理任何儲存體帳戶。 如果您習慣使用 VMSS Python SDK，``storage_profile`` 現在可以與建立 VM 時所用的完全相同：
 
