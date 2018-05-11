@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure 事件格線程式庫"
-description: 
-keywords: "Azure, Python, SDK, API, 事件格線"
+title: 適用於 Python 的 Azure 事件格線程式庫
+description: ''
+keywords: Azure, Python, SDK, API, 事件格線
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -11,24 +11,85 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: 299b50ce8366d0c49ade28dfece98d6696a4f9ef
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: e68504b3ba5834a145af1231eacc076e424a2256
+ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event-grid-libraries-for-python"></a>適用於 Python 的 Event Grid 程式庫
 
-## <a name="overview"></a>概觀
+
 Azure Event Grid 是完全受控的智慧型事件路由服務，可讓統一事件耗用量使用發佈-訂閱模型。
 
-## <a name="management-api"></a>管理 API
+[進一步了解 ](/azure/event-grid/overview) Azure Event Grid 的相關資訊，並透過 [Azure Blob 儲存體教學課程](/azure/storage/blobs/storage-blob-event-quickstart)開始使用。 
+
+## <a name="publish-sdk"></a>發行 SDK
+
+使用 Azure Event Grid 發佈 SDK 來驗證、建立、處理事件，並將事件發佈至主題。
+
+### <a name="installation"></a>安裝 
+
+使用 [pip](https://pip.pypa.io/en/stable/quickstart/) 安裝套件：
+
+```bash
+pip install azure-eventgrid
+```
+
+### <a name="example"></a>範例 
+
+下列程式碼會將事件發佈至主題。 您可以透過 Azure 入口網站或 Azure CLI，擷取主題金鑰及端點：
+
+```azurecli-interactive
+endpoint=$(az eventgrid topic show --name <topic_name> -g gridResourceGroup --query "endpoint" --output tsv)
+key=$(az eventgrid topic key list --name <topic_name> -g gridResourceGroup --query "key1" --output tsv)
+```
+
+```python
+from datetime import datetime
+from azure.eventgrid import EventGridClient
+from msrest.authentication import TopicCredentials
+
+def publish_event(self):
+
+        credentials = TopicCredentials(
+            self.settings.EVENT_GRID_KEY
+        )
+        event_grid_client = EventGridClient(credentials)
+        event_grid_client.publish_events(
+            "your-endpoint-here",
+            events=[{
+                'id' : "dbf93d79-3859-4cac-8055-51e3b6b54bea",
+                'subject' : "Sample subject",
+                'data': {
+                    'key': 'Sample Data'
+                },
+                'event_type': 'SampleEventType',
+                'event_time': datetime(2018, 5, 2),
+                'data_version': 1
+            }]
+        )
+```
+
+> [!div class="nextstepaction"]
+> [探索用戶端 API](/python/api/overview/azure/eventgrid/client)
+
+## <a name="management-sdk"></a>管理 SDK
+
+透過管理 SDK 來建立、更新或刪除 Event Grid 執行個體、主題和訂用帳戶。
+
+### <a name="installation"></a>安裝 
+
+使用 [pip](https://pip.pypa.io/en/stable/quickstart/) 安裝套件：
+
 ```bash
 pip install azure-mgmt-eventgrid
 ```
 
 ### <a name="example"></a>範例
-下列項目可建立自訂主題、訂閱主題，並觸發事件以檢視結果。 RequestBin 是一個開放原始碼的第三方工具，可讓您建立端點，以及檢視傳送給它的要求。 移至 [RequestBin](https://requestb.in/)，然後按一下 [建立 RequestBin]。 複製 bin URL，因為您在訂閱主題時需要用到它。
+
+下列程式碼會建立一個自訂主題，並訂閱主題端點。 接著，程式碼會透過 HTTPS 將事件傳送至主題。
+RequestBin 是一個開放原始碼的第三方工具，可讓您建立端點，以及檢視傳送給它的要求。 移至 [RequestBin](https://requestb.in/)，然後按一下 [建立 RequestBin]。 複製 bin URL，因為您在訂閱主題時需要用到它。
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient
@@ -87,3 +148,6 @@ az group delete --name gridResourceGroup
 > [!div class="nextstepaction"]
 > [探索管理 API](/python/api/overview/azure/eventgrid/management)
 
+## <a name="learn-more"></a>深入了解
+
+[使用 Event Grid SDK 接收事件](/azure/event-grid/receive-events)
