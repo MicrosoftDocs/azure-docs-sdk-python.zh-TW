@@ -1,8 +1,8 @@
-# <a name="azure-monitor"></a><span data-ttu-id="f0092-101">Azure 監視器</span><span class="sxs-lookup"><span data-stu-id="f0092-101">Azure Monitor</span></span>
+# <a name="azure-monitor"></a>Azure 監視器
 
-<span data-ttu-id="f0092-102">這個範例會取得 Azure 上的資源計量 (VM 等)。</span><span class="sxs-lookup"><span data-stu-id="f0092-102">This sample get the metrics of a resource on Azure (VMs, etc.).</span></span>
+這個範例會取得 Azure 上的資源計量 (VM 等)。
 
-<span data-ttu-id="f0092-103">[這裡](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)提供篩選條件的可用關鍵字完整清單</span><span class="sxs-lookup"><span data-stu-id="f0092-103">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)</span></span>
+[這裡](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)提供篩選條件的可用關鍵字完整清單
 
 ```python
 import datetime
