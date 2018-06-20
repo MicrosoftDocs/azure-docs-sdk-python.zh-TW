@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的服務匯流排程式庫"
-description: "適用於服務匯流排之 Python 用戶端和管理程式庫的參考文件"
-keywords: "Azure, Python, SDK, API, 傳訊, pubsub, pub-sub, 訊息代理程式"
+title: 適用於 Python 的服務匯流排程式庫
+description: 適用於服務匯流排之 Python 用戶端和管理程式庫的參考文件
+keywords: Azure, Python, SDK, API, 傳訊, pubsub, pub-sub, 訊息代理程式
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -14,6 +14,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551591"
 ---
 # <a name="service-bus-libraries-for-python"></a>適用於 Python 的服務匯流排程式庫
 

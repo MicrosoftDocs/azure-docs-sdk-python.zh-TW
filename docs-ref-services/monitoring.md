@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure 監視器程式庫"
-description: "適用於 Python 的 Azure 監視器程式庫參考"
-keywords: "Azure, python, SDK, API, 監視器"
+title: 適用於 Python 的 Azure 監視器程式庫
+description: 適用於 Python 的 Azure 監視器程式庫參考
+keywords: Azure, python, SDK, API, 監視器
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479061"
 ---
 # <a name="azure-monitoring-libraries-for-python"></a>適用於 Python 的 Azure 監視器程式庫
 

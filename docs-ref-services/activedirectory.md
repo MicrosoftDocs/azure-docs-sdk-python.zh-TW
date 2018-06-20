@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure Active Directory 程式庫"
-description: "適用於 Azure Active Directory 之 Python 用戶端程式庫的參考文件"
-keywords: "Azure, Python, SDK, API, SQL, 驗證, AAD, Active Directory , Graph, OAuth 2.0"
+title: 適用於 Python 的 Azure Active Directory 程式庫
+description: 適用於 Azure Active Directory 之 Python 用戶端程式庫的參考文件
+keywords: Azure, Python, SDK, API, SQL, 驗證, AAD, Active Directory , Graph, OAuth 2.0
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478921"
 ---
 # <a name="azure-active-directory-libraries-for-python"></a>適用於 Python 的 Azure Active Directory 程式庫
 

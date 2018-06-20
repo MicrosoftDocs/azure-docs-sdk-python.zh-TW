@@ -1,6 +1,6 @@
 ---
-title: "適用於 Python 的 Azure DevTest Labs 程式庫"
-description: "適用於 Python 的 Azure DevTest Labs 程式庫參考"
+title: 適用於 Python 的 Azure DevTest Labs 程式庫
+description: 適用於 Python 的 Azure DevTest Labs 程式庫參考
 keywords: Azure, python, SDK, API, DevTest Labs
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551571"
 ---
 # <a name="azure-devtest-labs-libraries-for-python"></a>適用於 Python 的 Azure DevTest Labs 程式庫
 

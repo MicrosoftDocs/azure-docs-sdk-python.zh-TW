@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure MySQL 程式庫"
-description: 
-keywords: "Azure, Python, SDK, API, SQL, 資料庫, MySQL"
+title: 適用於 Python 的 Azure MySQL 程式庫
+description: ''
+keywords: Azure, Python, SDK, API, SQL, 資料庫, MySQL
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479181"
 ---
 # <a name="azure-mysql-libraries-for-python"></a>適用於 Python 的 Azure MySQL 程式庫 
 

@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure 虛擬機器程式庫"
-description: 
-keywords: "Azure, Python, SDK, API, 計算, 虛擬機器"
+title: 適用於 Python 的 Azure 虛擬機器程式庫
+description: ''
+keywords: Azure, Python, SDK, API, 計算, 虛擬機器
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478821"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 虛擬機器程式庫
 

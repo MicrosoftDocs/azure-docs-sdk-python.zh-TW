@@ -1,6 +1,6 @@
 ---
-title: "適用於 Python 的 Azure CDN 程式庫"
-description: "適用於 Python 的 Azure CDN 程式庫參考"
+title: 適用於 Python 的 Azure CDN 程式庫
+description: 適用於 Python 的 Azure CDN 程式庫參考
 keywords: Azure, python, SDK, API, CDN
 author: sptramer
 ms.author: sttramer
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478881"
 ---
 # <a name="azure-cdn-libraries-for-python"></a>適用於 Python 的 Azure CDN 程式庫
 

@@ -1,6 +1,6 @@
 ---
-title: "適用於 Python 的 Azure 管理程式庫 Web 應用程式範例"
-description: "取得程式碼範例，以使用適用於 Python 的 Azure 管理程式庫來建立和更新裝載於 App Service 中的 Azure Web 應用程式"
+title: 適用於 Python 的 Azure 管理程式庫 Web 應用程式範例
+description: 取得程式碼範例，以使用適用於 Python 的 Azure 管理程式庫來建立和更新裝載於 App Service 中的 Azure Web 應用程式
 keywords: Azure, Java, SDK, API, Web Apps, App Service
 author: lisawong19
 ms.author: liwong
@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.assetid: 
+ms.assetid: ''
 ms.openlocfilehash: 64ca5c673366f641ffd66fccb88750c32a4fad38
 ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909021"
 ---
 # <a name="azure-management-libraries-for-python-samples-for-web-apps"></a>針對 Web 應用程式所提供之適用於 Python 的 Azure 管理程式庫範例
 
