@@ -16,6 +16,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33901423"
 ---
 # <a name="event-grid-libraries-for-python"></a><span data-ttu-id="88056-103">適用於 Python 的 Event Grid 程式庫</span><span class="sxs-lookup"><span data-stu-id="88056-103">Event Grid libraries for Python</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839403"
 ---
 # <a name="managed-disks"></a><span data-ttu-id="92ee5-103">受控磁碟</span><span class="sxs-lookup"><span data-stu-id="92ee5-103">Managed Disks</span></span>
 

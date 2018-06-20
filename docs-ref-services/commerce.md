@@ -1,6 +1,6 @@
 ---
-title: "適用於 Python 的 Azure Commerce 程式庫"
-description: "適用於 Python 的 Azure Commerce 程式庫參考"
+title: 適用於 Python 的 Azure Commerce 程式庫
+description: 適用於 Python 的 Azure Commerce 程式庫參考
 keywords: Azure, python, SDK, API, Commerce
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551601"
 ---
 # <a name="azure-commerce-libraries-for-python"></a><span data-ttu-id="a2fcf-104">適用於 Python 的 Azure Commerce 程式庫</span><span class="sxs-lookup"><span data-stu-id="a2fcf-104">Azure Commerce libraries for python</span></span>
 

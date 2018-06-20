@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure 排程器程式庫"
-description: "適用於 Python 的 Azure 排程器程式庫參考"
-keywords: "Azure, python, SDK, API, 排程器"
+title: 適用於 Python 的 Azure 排程器程式庫
+description: 適用於 Python 的 Azure 排程器程式庫參考
+keywords: Azure, python, SDK, API, 排程器
 author: lisawong19
 ms.author: liwong
 manager: mbaldwin
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551611"
 ---
 # <a name="azure-scheduler-libraries-for-python"></a><span data-ttu-id="ce1fa-104">適用於 Python 的 Azure 排程器程式庫</span><span class="sxs-lookup"><span data-stu-id="ce1fa-104">Azure Scheduler libraries for python</span></span>
 

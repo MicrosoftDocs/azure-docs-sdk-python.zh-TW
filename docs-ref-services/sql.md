@@ -13,6 +13,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33901351"
 ---
 # <a name="azure-sql-database-libraries-for-python"></a><span data-ttu-id="2ad6a-103">適用於 Python 的 Azure SQL Database 程式庫</span><span class="sxs-lookup"><span data-stu-id="2ad6a-103">Azure SQL Database libraries for Python</span></span>
 

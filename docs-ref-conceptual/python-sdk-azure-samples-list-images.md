@@ -1,9 +1,9 @@
 ---
-title: "列出映像"
-description: "列印要用來建立虛擬機器的所有可用映像。"
+title: 列出映像
+description: 列印要用來建立虛擬機器的所有可用映像。
 author: lisawong19
 manager: douge
-ms.assetid: 
+ms.assetid: ''
 ms.devlang: python
 ms.topic: article
 ms.service: Azure
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909031"
 ---
 # <a name="list-images"></a><span data-ttu-id="b8e5e-103">列出映像</span><span class="sxs-lookup"><span data-stu-id="b8e5e-103">List images</span></span>
 

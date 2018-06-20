@@ -1,6 +1,6 @@
 ---
-title: "適用於 Python 開發人員的 Azure 工具 | Microsoft Docs"
-description: "供 Python 開發人員在 Azure 上工作的 IDE 整合及命令列介面。"
+title: 適用於 Python 開發人員的 Azure 工具 | Microsoft Docs
+description: 供 Python 開發人員在 Azure 上工作的 IDE 整合及命令列介面。
 author: lisawong19
 manager: douge
 ms.devlang: python
@@ -14,6 +14,7 @@ ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26184592"
 ---
 # <a name="azure-tools-for-python-developers"></a><span data-ttu-id="c33aa-103">適用於 Python 開發人員的 Azure 工具</span><span class="sxs-lookup"><span data-stu-id="c33aa-103">Azure tools for Python developers</span></span>
 

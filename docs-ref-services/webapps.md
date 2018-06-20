@@ -1,6 +1,6 @@
 ---
-title: "適用於 Python 的 Azure Web Apps 程式庫"
-description: 
+title: 適用於 Python 的 Azure Web Apps 程式庫
+description: ''
 keywords: Azure, Python, SDK, API, Web Apps, App Service
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479221"
 ---
 # <a name="azure-web-apps-libraries-for-python"></a><span data-ttu-id="81d6f-103">適用於 Python 的 Azure Web Apps 程式庫</span><span class="sxs-lookup"><span data-stu-id="81d6f-103">Azure Web Apps libraries for Python</span></span>
 

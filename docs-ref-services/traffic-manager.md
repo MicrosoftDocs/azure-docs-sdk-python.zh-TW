@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure 流量管理員程式庫"
-description: "適用於 Python 的 Azure 流量管理員程式庫參考"
-keywords: "Azure, python, SDK, API, 流量管理員"
+title: 適用於 Python 的 Azure 流量管理員程式庫
+description: 適用於 Python 的 Azure 流量管理員程式庫參考
+keywords: Azure, python, SDK, API, 流量管理員
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478941"
 ---
 # <a name="azure-traffic-manager-libraries-for-python"></a><span data-ttu-id="d5b19-104">適用於 Python 的 Azure 流量管理員程式庫</span><span class="sxs-lookup"><span data-stu-id="d5b19-104">Azure Traffic Manager libraries for python</span></span>
 
