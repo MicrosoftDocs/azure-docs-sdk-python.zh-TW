@@ -1,7 +1,7 @@
 ---
-title: "適用於 Python 的 Azure 儲存體程式庫"
-description: 
-keywords: "Azure, Python, SDK, API, 儲存體"
+title: 適用於 Python 的 Azure 儲存體程式庫
+description: ''
+keywords: Azure, Python, SDK, API, 儲存體
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -11,11 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: storage
-ms.openlocfilehash: e00e821ff3e806a994fa8d96aae50c35eeeb8392
-ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
+ms.openlocfilehash: e45b12af9e026e0f6390556813385d86784feaa4
+ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35720059"
 ---
 # <a name="azure-storage-libraries-for-python"></a>適用於 Python 的 Azure 儲存體程式庫
 
@@ -37,7 +38,7 @@ Azure 儲存體用戶端程式庫由 4 個套件組成，分別是：Blob、檔�
 pip install azure-storage-blob
 ```
 
-### <a name="management"></a>管理
+### <a name="management"></a>管理性
 
 ```bash
 pip install azure-mgmt-storage
@@ -45,6 +46,8 @@ pip install azure-mgmt-storage
 
 ## <a name="example"></a>範例
 ```python
+from azure.storage.blob import BlockBlobService
+
 blob_service = BlockBlobService(account_name, account_key)
 
 blob_service.create_container(
