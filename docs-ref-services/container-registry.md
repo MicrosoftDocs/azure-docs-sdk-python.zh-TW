@@ -11,22 +11,22 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 920c79d9850d32bd612cfc5e8be686231fa1c4e8
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 97eff078b8fd5050ba932dc545a7777f7e83d2f7
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29479121"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52273064"
 ---
-# <a name="azure-container-registry-libraries-for-python"></a><span data-ttu-id="34b65-104">適用於 Python 的 Azure Container Registry 程式庫</span><span class="sxs-lookup"><span data-stu-id="34b65-104">Azure Container Registry libraries for python</span></span>
+# <a name="azure-container-registry-libraries-for-python"></a><span data-ttu-id="41c28-104">適用於 Python 的 Azure Container Registry 程式庫</span><span class="sxs-lookup"><span data-stu-id="41c28-104">Azure Container Registry libraries for python</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="34b65-105">安裝程式庫</span><span class="sxs-lookup"><span data-stu-id="34b65-105">Install the libraries</span></span>
+## <a name="install-the-libraries"></a><span data-ttu-id="41c28-105">安裝程式庫</span><span class="sxs-lookup"><span data-stu-id="41c28-105">Install the libraries</span></span>
 
 
-### <a name="management"></a><span data-ttu-id="34b65-106">管理</span><span class="sxs-lookup"><span data-stu-id="34b65-106">Management</span></span>
+### <a name="management"></a><span data-ttu-id="41c28-106">管理性</span><span class="sxs-lookup"><span data-stu-id="41c28-106">Management</span></span>
 
 ```bash
 pip install azure-mgmt-containerregistry
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="34b65-107">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="34b65-107">Explore the Management APIs</span></span>](/python/api/overview/azure/containerregistry/management)
+> [<span data-ttu-id="41c28-107">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="41c28-107">Explore the Management APIs</span></span>](/python/api/overview/azure/containerregistry/management)
