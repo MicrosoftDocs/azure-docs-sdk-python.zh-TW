@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 5807b85f02c05c2a767a2df2e89d9e98b7e6e05b
-ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
+ms.openlocfilehash: 80c9b90c9527503f9cc3782b429b4da1d4ff514f
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
-ms.locfileid: "29551571"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277002"
 ---
 # <a name="azure-devtest-labs-libraries-for-python"></a>適用於 Python 的 Azure DevTest Labs 程式庫
 

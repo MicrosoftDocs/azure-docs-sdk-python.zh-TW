@@ -11,19 +11,19 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: b17d796c37809745993ab54f45ee51895ca21cb0
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 253a7e72f91761b1092c3d18682e75a4eb42af01
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478781"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52276812"
 ---
 # <a name="azure-logic-apps-libraries-for-python"></a>適用於 Python 的 Azure Logic Apps 程式庫
 
 ## <a name="install-the-libraries"></a>安裝程式庫
 
 
-### <a name="management"></a>管理
+### <a name="management"></a>管理性
 
 ```bash
 pip install azure-mgmt-logic

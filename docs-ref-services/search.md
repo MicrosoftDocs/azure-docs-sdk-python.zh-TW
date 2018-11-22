@@ -11,19 +11,19 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: cf08ad39929d596af215c7185d3189e6e17d1760
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: bc305fb241959291e4b6ff3093e38a18cb5ba379
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478811"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277495"
 ---
 # <a name="azure-search-libraries-for-python"></a>適用於 Python 的 Azure 搜尋服務程式庫
 
 ## <a name="install-the-libraries"></a>安裝程式庫
 
 
-### <a name="management"></a>管理
+### <a name="management"></a>管理性
 
 ```bash
 pip install azure-mgmt-search

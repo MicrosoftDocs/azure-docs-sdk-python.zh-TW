@@ -11,18 +11,18 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 3d2691ae1ba84c41f25de2b099aacefaa92152ed
-ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
+ms.openlocfilehash: 98e32799a4240f9946caf1ab7b05e35605d89dc9
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
-ms.locfileid: "29551611"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277058"
 ---
 # <a name="azure-scheduler-libraries-for-python"></a>適用於 Python 的 Azure 排程器程式庫
 
 ## <a name="install-the-libraries"></a>安裝程式庫
 
-## <a name="management"></a>管理
+## <a name="management"></a>管理性
 
 ```bash
 pip install azure-mgmt-scheduler

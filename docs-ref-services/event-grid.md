@@ -7,23 +7,21 @@ ms.author: liwong
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: e68504b3ba5834a145af1231eacc076e424a2256
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901423"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52276832"
 ---
 # <a name="event-grid-libraries-for-python"></a>適用於 Python 的 Event Grid 程式庫
 
 
 Azure Event Grid 是完全受控的智慧型事件路由服務，可讓統一事件耗用量使用發佈-訂閱模型。
 
-[進一步了解 ](/azure/event-grid/overview) Azure Event Grid 的相關資訊，並透過 [Azure Blob 儲存體教學課程](/azure/storage/blobs/storage-blob-event-quickstart)開始使用。 
+[進一步了解 ](/azure/event-grid/overview)Azure Event Grid 的相關資訊，並參考 [Azure Blob 儲存體教學課程](/azure/storage/blobs/storage-blob-event-quickstart)開始使用。 
 
 ## <a name="publish-sdk"></a>發行 SDK
 
