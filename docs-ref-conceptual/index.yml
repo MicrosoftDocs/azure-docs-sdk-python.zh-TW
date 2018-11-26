@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 65fe229da00402bd107514993ee0f9141681f40b
-ms.sourcegitcommit: 16eecfc4ed0e2a8344ce5887327cdf2619ba89e4
+ms.openlocfilehash: b43b8597287347d3ae9d334f151b7e1514810321
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39189558"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277130"
 documentType: LandingData
 title: 適用於 Python 開發人員的 Azure
 metadata:
@@ -30,35 +30,21 @@ sections:
     columns: 3
     items:
     - href: https://docs.microsoft.com/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
-      html: <p>在 Azure 上阵置和部署 Python 應用程式</p>
       image:
-        src: https://docs.microsoft.com/azure/media/index/ContainerInstances.svg
-      title: 容器應用程式裝載
-    - href: https://docs.microsoft.com/en-us/azure/cognitive-services/face/quickstarts/python?toc=%2Fpython%2Fazure%2FTOC.json
-      html: <p>使用 Python SDK 進行臉部偵測</p>
-      image:
-        src: https://docs.microsoft.com/azure/media/index/API_Face.svg
-      title: 認知服務 API
+        src: https://docs.microsoft.com/azure/media/index/appservice.svg
+      title: 在 Azure 上建置和部署 Python Web 應用程式
     - href: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-python?toc=%2Fpython%2Fazure%2FTOC.json
-      html: <p>使用 SQL API 建立和查詢文件資料</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
-      title: Cosmos DB
-    - href: https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb
-      html: <p>使用 Jupyter Notebook 來辨識模式</p>
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_python.svg
-      title: Machine Learning
-    - href: https://azure.microsoft.com/resources/samples/?platform=python
-      html: <p>使用 Python 的 Azure 程式碼範例</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: 程式碼範例
+      title: 在 Azure 上的全域複寫資料庫中建立及查詢資料
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/Storage.svg
+      title: 在 Azure 上安全地儲存和擷取資料
+      href: https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-python?toc=%2Fpython%2Fazure%2FTOC.json
     - href: https://docs.microsoft.com/python/api?view=azure-python
-      html: <p>Python 模組</p>
       image:
         src: https://docs.microsoft.com/media/common/i_api-reference.svg
-      title: API 參考
+      title: 適用於 Python 的 Azure SDK 參考
 - title: 應用程式裝載
   items:
   - type: list
@@ -68,14 +54,19 @@ sections:
     items:
     - image:
         src: https://docs.microsoft.com/azure/media/index/app-service-web.svg
-      title: App Service 方案
-      html: <p>建置、部署及縮放在 Linux 或 Windows 上的 Python 應用程式</p>
-      href: https://docs.microsoft.com/azure/app-service/containers/tutorial-custom-docker-image?toc=%2Fpython%2Fazure%2FTOC.json
+      title: Web Apps
+      html: <p>建置、部署及縮放 Linux 上的 Python Web 應用程式</p>
+      href: https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/media/logos/logo_kubernetes.svg
-      title: Kubernetes 服務
+      title: Azure Kubernetes Service
       html: <p>部署和管理容器化應用程式</p>
       href: https://docs.microsoft.com/azure/aks/kubernetes-walkthrough?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/en-us/azure/virtual-machines/media/index/virtual-machines.svg
+      title: 虛擬機器
+      html: <p>使用 Linux 發行版本或 Windows Server 大規模執行您的程式碼</p>
+      href: https://docs.microsoft.com//azure/virtual-machines/linux/quick-create-cli?toc=%2Fpython%2Fazure%2FTOC.json
 - title: 資料解決方案
   items:
   - type: list
@@ -86,28 +77,38 @@ sections:
     - image:
         src: https://docs.microsoft.com/azure/media/index/Storage.svg
       title: 儲存體
-      html: <p>使用高度可用且可擴充的雲端儲存體安全地儲存檔案。</p>
+      html: <p>使用高度可用且可擴充的雲端儲存體安全地儲存檔案</p>
       href: https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-python?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
       title: Cosmos DB
-      html: <p>使用熱門的 API 搭配分散式的多模型資料庫</p>
+      html: <p>將資料儲存在全域散發、可擴充且多模型的 NoSQL 資料庫服務中</p>
       href: https://docs.microsoft.com/azure/cosmos-db/sql-api-python-application?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/azure/media/index/RedisCache.svg
       title: Redis 快取
       html: <p>從 Python 讀取資料，並將資料從 Python 寫入 Azure Redis Cache</p>
-      href: https://docs.microsoft.com/en-us/azure/redis-cache/cache-python-get-started?toc=%2Fpython%2Fazure%2FTOC.json
+      href: https://docs.microsoft.com/azure/redis-cache/cache-python-get-started?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/azure/media/index/PostgreSQL.svg
       title: 適用於 PostgreSQL 的 Azure 資料庫
-      html: <p>使用 PostgreSQL 建立 Flask Web 應用程式，並將其部署到 Azure</p>
-      href: https://docs.microsoft.com/azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p>使用 Python 建立 PostgreSQL 雲端執行個體，並加以連線</p>
+      href: https://docs.microsoft.com/azure/postgresql/quickstart-create-server-database-portal?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/azure/media/index/MySQL.SVG
       title: 適用於 MySQL 的 Azure 資料庫
       html: <p>使用 Python 建立 MySQL 雲端執行個體，並加以連線</p>
-      href: https://docs.microsoft.com/azure/mysql/connect-python?toc=%2Fpython%2Fazure%2FTOC.json
+      href: https://docs.microsoft.com/azure/mysql/quickstart-create-mysql-server-database-using-azure-portal?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/SQLDatabase.svg
+      title: SQL Database
+      html: <p>使用受控 SQL Server 設定雲端中的關聯式資料庫</p>
+      href: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/hdinsight/media/index/spark_r.svg
+      title: Hadoop 和 Spark
+      html: <p>針對大型工作負載，搭配 Azure HDInsights 使用受控 Hadoop 和 Spark 叢集</p>
+      href: https://docs.microsoft.com/azure/hdinsight/hadoop/apache-hadoop-linux-create-cluster-get-started-portal?toc=%2Fpython%2Fazure%2FTOC.json
 - title: AI 和機器學習服務
   items:
   - type: list
@@ -117,19 +118,19 @@ sections:
     items:
     - image:
         src: https://docs.microsoft.com/azure/media/index/MachineLearning.svg
-      title: Machine Learning
-      html: <p>建置能以智慧方式感應、處理並針對資訊採取行動的應用程式</p>
+      title: Azure Machine Learning
+      html: <p>建置能以智慧方式擴充、處理並針對資訊採取行動的應用程式</p>
       href: https://docs.microsoft.com/azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
-        src: https://docs.microsoft.com/azure/media/index/batch-ai.svg
-      title: Batch AI
-      html: <p>在單一節點 GPU 叢集上執行 CNTK 定型作業。</p>
-      href: https://docs.microsoft.com/azure/batch-ai/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
-    - image:
-        src: https://docs.microsoft.com/media/logos/logo_python.svg
+        src: https://docs.microsoft.com/en-us/python/azure/media/AzureNotebooks.png
       title: Azure Notebooks
-      html: <p>在雲端中免費建立和共用 Jupyter Notebook</p>
+      html: <p>使用完全受控 Jupyter Notebook 執行 Python 資料科學實驗</p>
       href: https://notebooks.azure.com/
+    - image:
+        src: https://docs.microsoft.com/en-us/azure/virtual-machines/media/index/virtual-machines.svg
+      title: 資料科學虛擬機器
+      html: <p>使用順暢無阻的資料科學環境，其中包含適用於資料科學的熱門工具</p>
+      href: https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro?toc=%2Fpython%2Fazure%2FTOC.json
 - title: 安全性與整合
   items:
   - type: list
@@ -140,12 +141,12 @@ sections:
     - image:
         src: https://docs.microsoft.com/azure/media/index/KeyVault.svg
       title: Key Vault
-      html: <p>保護雲端應用程式和服務所使用的金鑰和祕密</p>
+      html: <p>保護雲端應用程式和服務所使用的密碼編譯金鑰和祕密</p>
       href: https://docs.microsoft.com/en-us/python/api/overview/azure/key-vault?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/azure/media/index/ServiceBus.svg
       title: 服務匯流排
-      html: <p>適用於分散式應用程式和微服務的可靠傳訊服務。</p>
+      html: <p>可靠地在分散式應用程式和微服務之間傳送訊息</p>
       href: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=%2Fpython%2Fazure%2FTOC.json
 - title: 工具和擴充功能
   items:
@@ -154,8 +155,8 @@ sections:
     className: cardsM
     columns: 3
     items:
-    - href: https://code.visualstudio.com/docs/azure/extensions
-      html: <p>適用於 Visual Studio Code 的 Azure 擴充功能。</p>
+    - href: https://code.visualstudio.com/docs/python/python-tutorial
+      html: <p>使用適用於 Visual Studio Code 的 Azure 擴充功能開發 Python 應用程式並部署至 Azure</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
       title: Visual Studio Code
@@ -163,9 +164,14 @@ sections:
       html: <p>適用於 Python 的 IntelliSense、開發、程式碼剖析和偵錯工具</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_visual-studio.svg
-      title: Visual Studio 中的 Python
+      title: Visual Studio IDE
     - href: https://docs.microsoft.com/cli/azure?toc=%2Fpython%2Fazure%2FTOC.json
-      html: <p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">從命令列管理 Azure 資源。</a></p>
+      html: <p>從命令列管理 Azure 資源</p>
       image:
         src: https://docs.microsoft.com/azure/media/index/azure_dev-7.svg
-      title: Azure CLI 2.0
+      title: Azure CLI
+    - href: https://docs.microsoft.com/en-us/windows/wsl/install-win10?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p>使用各種支援的發行版本在 Windows 10 上原生執行 Linux 應用程式</p>
+      image:
+        src: https://docs.microsoft.com/en-us/media/logos/logo_linux-color.svg
+      title: 適用於 Linux 的 Windows 子系統
