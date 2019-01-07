@@ -7,18 +7,18 @@ ms.author: tyfox
 ms.date: 09/18/2018
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 42e1e36b5854fda93188564be3ed3064b9ba4435
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 9447d50fd734bd9221accbf470a456210bb57a7f
+ms.sourcegitcommit: e2e4b1ecfac9804a72973477634128061c1ec990
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277466"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53455105"
 ---
 # <a name="hdinsight-python-management-sdk-preview"></a>HDInsight Python 管理 SDK 預覽
 
 ## <a name="overview"></a>概觀
 
-HDInsight ython SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 它包含用來建立、刪除、更新、列出、調整、執行指令碼動作、監視、取得 HDInsight 叢集屬性的作業，和其他多種作業。
+HDInsight ython SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 它包含用來建立、刪除、更新、列出、調整大小、執行指令碼動作、監視、取得 HDInsight 叢集屬性的作業，和其他多種作業。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -37,7 +37,7 @@ HDInsight ython SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 
 SDK 必須先使用您的 Azure 訂用帳戶進行驗證。  請依照下列範例建立服務主體，並使用它來驗證。 此動作完成後，您會有 `HDInsightManagementClient` 的執行個體，其中包含許多可用來執行管理作業的方法 (分述於下列各節中)。
 
 > [!NOTE]
-> 除了下列範例以外，還有其他方式可進行驗證，可能更符合您的需求。 所有方法皆概述於此處：[使用適用於 Python 的 Azure 管理程式庫來進行驗證](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate?view=azure-python)
+> 除了下列範例以外，還有其他方式可進行驗證，可能更符合您的需求。 此處概述所有方法：[使用適用於 Python 的 Azure 管理程式庫來進行驗證](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate?view=azure-python)
 
 ### <a name="authentication-example-using-a-service-principal"></a>使用服務主體的驗證範例
 
@@ -310,7 +310,7 @@ client.clusters.update("<Resource Group Name>", "<Cluster Name>", tags={<Diction
 client.clusters.update("<Resource Group Name>", "<Cluster Name>", tags={"tag1Name" : "tag1Value", "tag2Name" : "tag2Value"})
 ```
 
-### <a name="scale-cluster"></a>調整叢集
+### <a name="resize-cluster"></a>調整叢集大小
 
 您可以藉由指定新的大小來調整指定叢集的背景工作節點數目，如下所示：
 
@@ -325,7 +325,7 @@ HDInsight 管理 SDK 也可用來透過 Operations Management Suite (OMS) 管理
 ### <a name="enable-oms-monitoring"></a>啟用 OMS 監視
 
 > [!NOTE]
-> 若要啟用 OMS 監視，您必須擁有現有的 Log Analytics 工作區。 如果您尚未建立此工作區，您可以參考下列資料了解其建立方式：[在 Azure 入口網站中建立 Log Analytics 工作區](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)。
+> 若要啟用 OMS 監視，您必須擁有現有的 Log Analytics 工作區。 如果您尚未建立工作區，您可以在此了解如何建立：[在 Azure 入口網站中建立 Log Analytics 工作區](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)。
 
 若要對您的叢集啟用 OMS 監視：
 
@@ -353,7 +353,7 @@ client.extension.disable_monitoring("<Resource Group Name>", "<Cluster Name>")
 
 HDInsight 提供名為指令碼動作的設定方法，此方法會叫用自訂指令碼來自訂叢集。
 > [!NOTE]
-> 如需如何使用指令碼動作的詳細資訊，請參閱：[使用指令碼動作自訂以 Linux 為基礎的 HDInsight 叢集](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)
+> 您可以在此處找到如何使用指令碼動作的詳細資訊：[使用指令碼動作自訂 Linux 型 HDInsight 叢集](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)
 
 ### <a name="execute-script-actions"></a>執行指令碼動作
 若要對指定的叢集執行指令碼動作：
