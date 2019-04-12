@@ -1,24 +1,24 @@
 ---
-title: Azure HDInsight Python SDK 預覽
-description: Azure HDInsight Python SDK 的參考。 HDInsight ython SDK 提供可讓您管理 HDInsight 叢集的類別和方法。
+title: 適用於 Python 的 Azure HDInsight SDK
+description: 適用於 Python 的 Azure HDInsight SDK 的參考。 適用於 Python 的 Azure HDInsight SDK 提供可讓您管理 HDInsight 叢集的類別和方法。
 ms.service: hdinsight
 author: tylerfox
 ms.author: tyfox
-ms.date: 09/18/2018
+ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 8d081739a3984e1cd3f7bbf31fcb44d63cfb6947
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: f16e5da474e1c506c800b860b451754a6bdc75bc
+ms.sourcegitcommit: 3c6087cbc1fee5a2c88c40fe96d351375c6c6377
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747708"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59504545"
 ---
-# <a name="hdinsight-python-management-sdk-preview"></a>HDInsight Python 管理 SDK 預覽
+# <a name="hdinsight-sdk-for-python"></a>適用於 Python 的 HDInsight SDK
 
 ## <a name="overview"></a>概觀
 
-HDInsight ython SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 它包含用來建立、刪除、更新、列出、調整大小、執行指令碼動作、監視、取得 HDInsight 叢集屬性的作業，和其他多種作業。
+適用於 Python 的 Azure HDInsight SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 它包含用來建立、刪除、更新、列出、調整大小、執行指令碼動作、監視、取得 HDInsight 叢集屬性的作業，和其他多種作業。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -28,11 +28,11 @@ HDInsight ython SDK 提供可讓您管理 HDInsight 叢集的類別和方法。 
 
 ## <a name="sdk-installation"></a>SDK 安裝
 
-您可以在 [Python 套件索引](https://pypi.org/project/azure-mgmt-hdinsight/)中找到 HDInsight Python SDK，然後藉由執行下列命令進行安裝： 
+您可以在 [Python 套件索引](https://pypi.org/project/azure-mgmt-hdinsight/)中找到 適用於 Python 的 HDInsight SDK，然後執行下列命令進行安裝： 
 
 `pip install azure-mgmt-hdinsight`
 
-## <a name="authentication"></a>驗證
+## <a name="authentication"></a>Authentication
 
 SDK 必須先使用您的 Azure 訂用帳戶進行驗證。  請依照下列範例建立服務主體，並使用它來驗證。 此動作完成後，您會有 `HDInsightManagementClient` 的執行個體，其中包含許多可用來執行管理作業的方法 (分述於下列各節中)。
 
@@ -235,6 +235,10 @@ client.clusters.create(
         properties=params
     ))
 ```
+
+#### <a name="samples"></a>範例
+
+這裡也提供建立數個常見 HDInsight 叢集類型的程式碼範例：[HDInsight Python 範例](https://github.com/Azure-Samples/hdinsight-python-sdk-samples).
 
 ### <a name="get-cluster-details"></a>取得叢集詳細資料
 
