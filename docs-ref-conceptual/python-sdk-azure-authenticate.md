@@ -2,20 +2,20 @@
 title: 使用適用於 Python 的 Azure 管理程式庫來進行驗證
 description: 使用用來進入適用於 Python 之 Azure 管理程式庫的服務主體來進行驗證
 keywords: Azure, Python, SDK, API, 驗證, Active Directory, 服務主體
-author: lisawong19
-ms.author: liwong
-manager: douge
-ms.date: 07/24/2017
+author: sptramer
+ms.author: sttramer
+manager: carmonm
+ms.date: 04/11/2019
 ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 5011d36f9258fb7c06a8b1d6a689e3b5058360bb
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 51f26b120cefffd2d7f4af9c2b6b2cb532bc6006
+ms.sourcegitcommit: 375a1f9180eb1323fe2af0a7e28fd4676973c68e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52273044"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59586806"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>使用適用於 Python 的 Azure 管理程式庫來進行驗證
 
@@ -28,79 +28,82 @@ ms.locfileid: "52273044"
 下列範例會使用[服務主體](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json)進行驗證。
 
 > [!NOTE]
-> 您可以透過 Azure CLI 2.0 來建立服務主體
+> 若要使用 Azure CLI 建立服務主體，請使用下列命令：
+>
 > ```bash
 > az ad sp create-for-rbac --name "MY-PRINCIPAL-NAME" --password "STRONG-SECRET-PASSWORD"
 > ```
+>
+> 若要深入了解使用 CLI 設定服務主體，請參閱[使用 Azure CLI 建立 Azure 服務主體](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ```python
-    from azure.common.credentials import ServicePrincipalCredentials
+from azure.common.credentials import ServicePrincipalCredentials
 
-    # Tenant ID for your Azure Subscription
-    TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
+# Tenant ID for your Azure subscription
+TENANT_ID = '<Your tenant ID>'
 
-    # Your Service Principal App ID
-    CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
+# Your service principal App ID
+CLIENT = '<Your service principal ID>'
 
-    # Your Service Principal Password
-    KEY = 'password'
+# Your service principal password
+KEY = '<Your service principal password>'
 
-    credentials = ServicePrincipalCredentials(
-        client_id = CLIENT,
-        secret = KEY,
-        tenant = TENANT_ID
-    )
+credentials = ServicePrincipalCredentials(
+    client_id = CLIENT,
+    secret = KEY,
+    tenant = TENANT_ID
+)
 ```
 
 > [注意！] 若要連線到其中一個 Azure Sovereign Cloud，請使用 `cloud_environment` 參數。
-
-```python
-    from azure.common.credentials import ServicePrincipalCredentials
-    from msrestazure.azure_cloud import AZURE_CHINA_CLOUD
-
-    # Tenant ID for your Azure Subscription
-    TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-
-    # Your Service Principal App ID
-    CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
-
-    # Your Service Principal Password
-    KEY = 'password'
-
-    credentials = ServicePrincipalCredentials(
-        client_id = CLIENT,
-        secret = KEY,
-        tenant = TENANT_ID,
-        cloud_environment = AZURE_CHINA_CLOUD
-    )
-```
+>
+> ```python
+> from azure.common.credentials import ServicePrincipalCredentials
+> from msrestazure.azure_cloud import AZURE_CHINA_CLOUD
+> 
+> # Tenant ID for your Azure Subscription
+> TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
+> 
+> # Your Service Principal App ID
+> CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
+> 
+> # Your Service Principal Password
+> KEY = 'password'
+> 
+> credentials = ServicePrincipalCredentials(
+>     client_id = CLIENT,
+>     secret = KEY,
+>     tenant = TENANT_ID,
+>     cloud_environment = AZURE_CHINA_CLOUD
+> )
+> ```
 
 如果您需要更多的控制，建議使用 [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) 和 SDK ADAL 包裝函式。 請參閱 ADAL 網站取得所有可用的案例清單和範例。 適用於服務主體驗證的範例：
 
 ```python
-    import adal
-    from msrestazure.azure_active_directory import AdalAuthentication
-    from msrestazure.azure_cloud import AZURE_PUBLIC_CLOUD
+import adal
+from msrestazure.azure_active_directory import AdalAuthentication
+from msrestazure.azure_cloud import AZURE_PUBLIC_CLOUD
 
-    # Tenant ID for your Azure Subscription
-    TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
+# Tenant ID for your Azure Subscription
+TENANT_ID = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 
-    # Your Service Principal App ID
-    CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
+# Your Service Principal App ID
+CLIENT = 'a2ab11af-01aa-4759-8345-7803287dbd39'
 
-    # Your Service Principal Password
-    KEY = 'password'
+# Your Service Principal Password
+KEY = 'password'
 
-    LOGIN_ENDPOINT = AZURE_PUBLIC_CLOUD.endpoints.active_directory
-    RESOURCE = AZURE_PUBLIC_CLOUD.endpoints.active_directory_resource_id
+LOGIN_ENDPOINT = AZURE_PUBLIC_CLOUD.endpoints.active_directory
+RESOURCE = AZURE_PUBLIC_CLOUD.endpoints.active_directory_resource_id
 
-    context = adal.AuthenticationContext(LOGIN_ENDPOINT + '/' + TENANT_ID)
-    credentials = AdalAuthentication(
-        context.acquire_token_with_client_credentials,
-        RESOURCE,
-        CLIENT,
-        KEY
-    )
+context = adal.AuthenticationContext(LOGIN_ENDPOINT + '/' + TENANT_ID)
+credentials = AdalAuthentication(
+    context.acquire_token_with_client_credentials,
+    RESOURCE,
+    CLIENT,
+    KEY
+)
 ```
 
 所有 ADAL 的有效呼叫可以搭配使用 `AdalAuthentication` 類別。
@@ -141,10 +144,10 @@ export AZURE_AUTH_LOCATION=~/.azure/azure_credentials.json
 
 ```json
 {
-    "clientId": "ad735158-65ca-11e7-ba4d-ecb1d756380e",
-    "clientSecret": "b70bb224-65ca-11e7-810c-ecb1d756380e",
-    "subscriptionId": "bfc42d3a-65ca-11e7-95cf-ecb1d756380e",
-    "tenantId": "c81da1d8-65ca-11e7-b1d1-ecb1d756380e",
+    "clientId": "<Service principal ID>",
+    "clientSecret": "<Service principal secret/password>",
+    "subscriptionId": "<Subscription associated with the service principal>",
+    "tenantId": "<The service principal's tenant>",
     "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
     "resourceManagerEndpointUrl": "https://management.azure.com/",
     "activeDirectoryGraphResourceId": "https://graph.windows.net/",
@@ -155,6 +158,7 @@ export AZURE_AUTH_LOCATION=~/.azure/azure_credentials.json
 ```
 
 然後，您可以建立使用用戶端處理站的任何用戶端：
+
 ```python
 from azure.common.client_factory import get_client_from_auth_file
 from azure.mgmt.compute import ComputeManagementClient
@@ -162,37 +166,41 @@ from azure.mgmt.compute import ComputeManagementClient
 client = get_client_from_auth_file(ComputeManagementClient)
 ```
 
-## <a name="mgmt-auth-msi"></a>使用受管理服務身分識別 (MSI) 
-MSI 是一種簡單的方法，讓 Azure 中的資源可以在無需建立特定認證的情況下，使用 SDK/CLI。
+## <a name="mgmt-auth-msi"></a>使用 Azure 受控識別進行驗證
+Azure 受控識別是一種簡單的方法，讓 Azure 中的資源可以在無需建立特定認證的情況下，使用 SDK/CLI。
+
+> [!IMPORTANT]
+>
+> 若要使用受控識別，您必須從 Azure Functions 或在 Azure 中執行的虛擬機器 Azure 資源連線到 Azure。 若要了解如何設定資源的受控識別，請參閱[設定 Azure 資源的受控識別](/azure/active-directory/managed-identities-azure-resources/qs-configure-cli-windows-vm)和[如何使用適用於 Azure 資源的受控識別](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-sign-in)。
 
 ```python
 from msrestazure.azure_active_directory import MSIAuthentication
 from azure.mgmt.resource import ResourceManagementClient, SubscriptionClient
 
-    # Create MSI Authentication
-    credentials = MSIAuthentication()
+# Create MSI Authentication
+credentials = MSIAuthentication()
 
 
-    # Create a Subscription Client
-    subscription_client = SubscriptionClient(credentials)
-    subscription = next(subscription_client.subscriptions.list())
-    subscription_id = subscription.subscription_id
+# Create a Subscription Client
+subscription_client = SubscriptionClient(credentials)
+subscription = next(subscription_client.subscriptions.list())
+subscription_id = subscription.subscription_id
 
-    # Create a Resource Management client
-    resource_client = ResourceManagementClient(credentials, subscription_id)
+# Create a Resource Management client
+resource_client = ResourceManagementClient(credentials, subscription_id)
 
 
-    # List resource groups as an example. The only limit is what role and policy are assigned to this MSI token.
-    for resource_group in resource_client.resource_groups.list():
-        print(resource_group.name)
+# List resource groups as an example. The only limit is what role and policy are assigned to this MSI token.
+for resource_group in resource_client.resource_groups.list():
+    print(resource_group.name)
 ```
 
 ## <a name="mgmt-auth-cli"></a>CLI 型驗證
 
-SDK 能夠使用 CLI 使用中訂用帳戶來建立用戶端。
+SDK 能夠使用 Azure CLI 的使用中訂用帳戶來建立用戶端。
 
 > [!IMPORTANT]
-> 這應該用來作為快速入門開發人員的體驗。 若要用於生產環境，請使用 [ADAL](#authenticate-with-token-credentials) 或您自己的認證系統。
+> 這應該用來作為快速入門開發人員的體驗。 若要用於生產環境，請使用 [ADAL](#mgmt-auth-legacy) 或您自己的認證系統。
 > 對 CLI 設定的任何變更都會影響 SDK 執行。
 
 若要定義使用中的認證，請使用 [az 登入](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)。
@@ -212,10 +220,10 @@ client = get_client_from_cli_profile(ComputeManagementClient)
 這個範例示範使用者/密碼情節。 不支援 2FA。
 
 ```python
-    from azure.common.credentials import UserPassCredentials
+from azure.common.credentials import UserPassCredentials
 
-    credentials = UserPassCredentials(
-        'user@domain.com',
-        'my_smart_password'
-    )
+credentials = UserPassCredentials(
+    'user@domain.com',
+    'my_smart_password'
+)
 ```

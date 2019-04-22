@@ -7,12 +7,12 @@ ms.author: tyfox
 ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: f16e5da474e1c506c800b860b451754a6bdc75bc
-ms.sourcegitcommit: 3c6087cbc1fee5a2c88c40fe96d351375c6c6377
+ms.openlocfilehash: ea9599be9fead5f964fbd4ce4e4bdc78a445918c
+ms.sourcegitcommit: 375a1f9180eb1323fe2af0a7e28fd4676973c68e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59504545"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59586816"
 ---
 # <a name="hdinsight-sdk-for-python"></a>適用於 Python 的 HDInsight SDK
 
@@ -131,7 +131,11 @@ client = HDInsightManagementClient(credentials, SUBSCRIPTION_ID)
 
 ### <a name="create-a-cluster"></a>建立叢集
 
-新叢集可藉由呼叫 `client.clusters.create()` 來建立。 
+新叢集可藉由呼叫 `client.clusters.create()` 來建立。
+
+#### <a name="samples"></a>範例
+
+這裡提供建立數個常見 HDInsight 叢集類型的程式碼範例：[HDInsight Python 範例](https://github.com/Azure-Samples/hdinsight-python-sdk-samples).
 
 #### <a name="example"></a>範例
 
@@ -235,10 +239,6 @@ client.clusters.create(
         properties=params
     ))
 ```
-
-#### <a name="samples"></a>範例
-
-這裡也提供建立數個常見 HDInsight 叢集類型的程式碼範例：[HDInsight Python 範例](https://github.com/Azure-Samples/hdinsight-python-sdk-samples).
 
 ### <a name="get-cluster-details"></a>取得叢集詳細資料
 

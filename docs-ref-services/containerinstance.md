@@ -2,21 +2,21 @@
 title: 適用於 Python 的 Azure 容器執行個體程式庫
 description: 適用於 Python 的 Azure 容器執行個體程式庫參考
 keywords: Azure、python、SDK、API、ACI、容器、執行個體
-author: mmacy
+author: dlepow
 manager: jeconnoc
-ms.date: 06/04/2018
-ms.author: marsma
+ms.date: 04/15/2019
+ms.author: danlep
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 95571e0da6ef82ef045d8c9ba0a5beb0abe9b63a
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 88df9443efb98bc5cec26c5eb4b01a4956141d40
+ms.sourcegitcommit: 1b45953f168cbf36869c24c1741d70153b88b9fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52273014"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59675933"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>適用於 Python 的 Azure 容器執行個體程式庫
 
@@ -38,7 +38,7 @@ pip install azure-mgmt-containerinstance
 
 [Azure-Samples/aci-docs-sample-python](https://github.com/Azure-Samples/aci-docs-sample-python)
 
-## <a name="authentication"></a>驗證
+## <a name="authentication"></a>Authentication
 
 驗證 SDK 用戶端 (如下列範例中的 Azure 容器執行個體與資源管理員用戶端) 最簡單的方式之一是使用[檔案式驗證](/python/azure/python-sdk-azure-authenticate#mgmt-auth-file)。 檔案式驗證會查詢 `AZURE_AUTH_LOCATION` 環境變數，以取得認證檔案的路徑。 若要使用檔案式驗證：
 
@@ -56,7 +56,8 @@ pip install azure-mgmt-containerinstance
 
 一旦您建立了認證檔案，並填入 `AZURE_AUTH_LOCATION` 環境變數後，請使用 [client_factory][client_factory] 模組的 `get_client_from_auth_file` 方法來初始化 [ResourceManagementClient][ResourceManagementClient] 和 [ContainerInstanceManagementClient][ContainerInstanceManagementClient] 物件。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
 
 若要深入了解 Azure 的 Python 管理程式庫中有哪些可用驗證方法，請參閱[使用適用於 Python 的 Azure 管理程式庫來進行驗證](/python/azure/python-sdk-azure-authenticate)。
 
@@ -64,13 +65,15 @@ pip install azure-mgmt-containerinstance
 
 此範例會建立一個容器群組搭配單一容器
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L94-L140 "Create single-container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[create_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L94-L141 "Create single-container group")]
 
 ## <a name="create-container-group---multiple-containers"></a>建立容器群組 - 多個容器
 
 此範例會建立一個容器群組搭配兩個容器：分別是應用程式容器和側車容器。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group_multi](~/aci-docs-sample-python/src/aci_docs_sample.py#L143-L196 "Create multi-container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[create_container_group_multi](~/aci-docs-sample-python/src/aci_docs_sample.py#L144-L197 "Create multi-container group")]
 
 ## <a name="create-task-based-container-group"></a>立工作型容器群組
 
@@ -89,7 +92,8 @@ pip install azure-mgmt-containerinstance
 * [重新啟動原則](/azure/container-instances/container-instances-restart-policy) - 使用 "Never" 的重新啟動原則設定容器，適用於作為批次工作一部份執行的工作型容器。
 * 使用 [AzureOperationPoller][AzureOperationPoller] 進行作業輪詢 - 叫用建立方法之後會對作業進行輪詢，以判斷作業何時完成，並可取得容器群組的記錄。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L199-L275 "Run a task-based container")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L200-L276 "Run a task-based container")]
 
 ## <a name="list-container-groups"></a>列出容器群組
 
@@ -97,7 +101,8 @@ pip install azure-mgmt-containerinstance
 
 當您列出容器群組時，每個所傳回群組的 [instance_view][instance_view] 都是 `None`。 若要取得容器群組內的容器詳細資料，您必須再 [get (取得)][containergroupoperations_get] 容器群組，這會傳回其中已填入 `instance_view` 屬性的群組。 請參閱下一節＜[取得現有的容器群組](#get-an-existing-container-group)＞，透過範例了解如何在容器群組的 `instance_view` 中逐一查看其中容器。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L278-L292 "List container groups")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L279-L293 "List container groups")]
 
 ## <a name="get-an-existing-container-group"></a>取得現有的容器群組
 
@@ -105,13 +110,15 @@ pip install azure-mgmt-containerinstance
 
 [取得作業][containergroupoperations_get]會傳回已填入 [instance_view][instance_view] 的容器群組，這可讓您逐一查看群組中的每個容器。 只有 `get` 作業會填入容器群組的 `instance_vew` 屬性 - 列出訂用帳戶或資源群組中的容器群組並不會填入執行個體檢視，因為此作業的本質可能相當耗費資源 (例如列出數百個容器群組時，每個容器群組可能包含多個容器)。 如同之前在＜[列出容器群組](#list-container-groups)＞一節中所述，執行 `list` 之後，您必須接著 `get` 特定容器群組，才能取得其中容器執行個體的詳細資料。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L295-L324 "Get container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L296-L325 "Get container group")]
 
 ## <a name="delete-a-container-group"></a>刪除容器群組
 
 此範例會從資源群組中刪除數個容器群組和資源群組本身。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[delete_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L83-L91 "Delete container groups and resource group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[delete_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L83-L91 "Delete container groups and resource group")]
 
 ## <a name="next-steps"></a>後續步驟
 
