@@ -12,10 +12,10 @@ ms.technology: azure
 ms.devlang: python
 ms.service: compute
 ms.openlocfilehash: adea3dfd1e38fb8c880009d5a02ab2b8be2a67e1
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.sourcegitcommit: a1248376a21fc9a9441ab1fb982a477bce48f565
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2019
 ms.locfileid: "29478821"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 虛擬機器程式庫
@@ -77,10 +77,8 @@ def create_vm()
 ## <a name="samples"></a>範例
 
 * [管理虛擬機器][1]
-* 
-            [使用受控服務身分識別進行驗證][2]
-* 
-            [使用受控服務識別延伸模組來建立虛擬機器][3]
+* [使用受控服務身分識別進行驗證][2]
+* [使用受控服務識別延伸模組來建立虛擬機器][3]
 * [管理負載平衡器][4]
 * [建立及設定受控磁碟][5]
 * [列出映像][6] 
