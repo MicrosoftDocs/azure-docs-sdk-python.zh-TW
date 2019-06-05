@@ -11,34 +11,34 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: appservice
-ms.openlocfilehash: 8e8dd78cbc2d5887308361a47a9571ce242aee6e
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 4870394c6ee39cde546d090fa1a0d136609851b3
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29479221"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376697"
 ---
-# <a name="azure-web-apps-libraries-for-python"></a><span data-ttu-id="81d6f-103">適用於 Python 的 Azure Web Apps 程式庫</span><span class="sxs-lookup"><span data-stu-id="81d6f-103">Azure Web Apps libraries for Python</span></span>
+# <a name="azure-web-apps-libraries-for-python"></a><span data-ttu-id="da8f5-103">適用於 Python 的 Azure Web Apps 程式庫</span><span class="sxs-lookup"><span data-stu-id="da8f5-103">Azure Web Apps libraries for Python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="81d6f-104">概觀</span><span class="sxs-lookup"><span data-stu-id="81d6f-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="da8f5-104">概觀</span><span class="sxs-lookup"><span data-stu-id="da8f5-104">Overview</span></span>
 
-<span data-ttu-id="81d6f-105">使用 [Azure App Service](/azure/app-service) 來部署及調整網站、Web 應用程式、服務和 REST API。</span><span class="sxs-lookup"><span data-stu-id="81d6f-105">Deploy and scale websites, web applications, services, and REST APIs with [Azure App Service](/azure/app-service).</span></span>
+<span data-ttu-id="da8f5-105">使用 [Azure App Service](/azure/app-service) 來部署及調整網站、Web 應用程式、服務和 REST API。</span><span class="sxs-lookup"><span data-stu-id="da8f5-105">Deploy and scale websites, web applications, services, and REST APIs with [Azure App Service](/azure/app-service).</span></span>
 
-<span data-ttu-id="81d6f-106">若要開始使用 Azure App Service，請參閱[在 Azure 中建立 Python Web 應用程式](/azure/app-service-web/app-service-web-get-started-python)。</span><span class="sxs-lookup"><span data-stu-id="81d6f-106">To get started with Azure App Service, see [Create a Python web app in Azure](/azure/app-service-web/app-service-web-get-started-python).</span></span>
+<span data-ttu-id="da8f5-106">若要開始使用 Azure App Service，請參閱[在 Azure 中建立 Python Web 應用程式](/azure/app-service-web/app-service-web-get-started-python)。</span><span class="sxs-lookup"><span data-stu-id="da8f5-106">To get started with Azure App Service, see [Create a Python web app in Azure](/azure/app-service-web/app-service-web-get-started-python).</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="81d6f-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="81d6f-107">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="da8f5-107">管理 API</span><span class="sxs-lookup"><span data-stu-id="da8f5-107">Management API</span></span>
 
-<span data-ttu-id="81d6f-108">使用管理 API 來部署、管理及調整裝載在 Azure App Service 中的元素。</span><span class="sxs-lookup"><span data-stu-id="81d6f-108">Deploy, manage, and scale elements hosted in the Azure App Service with the management API.</span></span>
+<span data-ttu-id="da8f5-108">使用管理 API 來部署、管理及調整裝載在 Azure App Service 中的元素。</span><span class="sxs-lookup"><span data-stu-id="da8f5-108">Deploy, manage, and scale elements hosted in the Azure App Service with the management API.</span></span>
 
-<span data-ttu-id="81d6f-109">透過 pip 安裝程式庫。</span><span class="sxs-lookup"><span data-stu-id="81d6f-109">Install the library via pip.</span></span>
+<span data-ttu-id="da8f5-109">透過 pip 安裝程式庫。</span><span class="sxs-lookup"><span data-stu-id="da8f5-109">Install the library via pip.</span></span>
 
 ```bash
 pip install azure-mgmt-web
 ```
 
-### <a name="example"></a><span data-ttu-id="81d6f-110">範例</span><span class="sxs-lookup"><span data-stu-id="81d6f-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="da8f5-110">範例</span><span class="sxs-lookup"><span data-stu-id="da8f5-110">Example</span></span>
 
-<span data-ttu-id="81d6f-111">從 GitHub 存放庫將 webapp 部署到 Azure Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="81d6f-111">Deploy a webapp from a GitHub repository into Azure Web App.</span></span>
+<span data-ttu-id="da8f5-111">從 GitHub 存放庫將 webapp 部署到 Azure Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="da8f5-111">Deploy a webapp from a GitHub repository into Azure Web App.</span></span>
 
 ```python
 siteConfiguration = SiteConfig(
@@ -67,15 +67,16 @@ source_control_async_operation = web_client.web_apps.create_or_update_source_con
     )
 )
 ```
+
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="81d6f-112">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="81d6f-112">Explore the Management APIs</span></span>](/python/api/overview/azure/webapps/management)
+> [<span data-ttu-id="da8f5-112">探索管理 API</span><span class="sxs-lookup"><span data-stu-id="da8f5-112">Explore the Management APIs</span></span>](/python/api/overview/azure/webapps/management)
 
-## <a name="samples"></a><span data-ttu-id="81d6f-113">範例</span><span class="sxs-lookup"><span data-stu-id="81d6f-113">Samples</span></span> 
+## <a name="samples"></a><span data-ttu-id="da8f5-113">範例</span><span class="sxs-lookup"><span data-stu-id="da8f5-113">Samples</span></span>
 
-* <span data-ttu-id="81d6f-114">[使用 Python 管理 Azure 網站][1]</span><span class="sxs-lookup"><span data-stu-id="81d6f-114">[Manage Azure websites with python][1]</span></span>
-* <span data-ttu-id="81d6f-115">[建立邏輯應用程式工作流程][2]</span><span class="sxs-lookup"><span data-stu-id="81d6f-115">[Create a Logic App workflow][2]</span></span>
- 
-<span data-ttu-id="81d6f-116">檢視 Web 應用程式範例的[完整清單](https://azure.microsoft.com/en-us/resources/samples/?platform=python&term=web-app)。</span><span class="sxs-lookup"><span data-stu-id="81d6f-116">View the [complete list](https://azure.microsoft.com/en-us/resources/samples/?platform=python&term=web-app) of web application samples.</span></span>
+* <span data-ttu-id="da8f5-114">[使用 Python 管理 Azure 網站][1]</span><span class="sxs-lookup"><span data-stu-id="da8f5-114">[Manage Azure websites with python][1]</span></span>
+* <span data-ttu-id="da8f5-115">[建立邏輯應用程式工作流程][2]</span><span class="sxs-lookup"><span data-stu-id="da8f5-115">[Create a Logic App workflow][2]</span></span>
+
+<span data-ttu-id="da8f5-116">檢視 Web 應用程式範例的[完整清單](https://azure.microsoft.com/resources/samples/?platform=python&term=web-app)。</span><span class="sxs-lookup"><span data-stu-id="da8f5-116">View the [complete list](https://azure.microsoft.com/resources/samples/?platform=python&term=web-app) of web application samples.</span></span>
 
 [1]: https://azure.microsoft.com/resources/samples/app-service-web-python-manage
 [2]: ../docs-ref-conceptual/python-sdk-azure-samples-logic-app-workflow.md
