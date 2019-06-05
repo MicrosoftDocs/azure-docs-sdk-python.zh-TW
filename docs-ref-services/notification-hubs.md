@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 3a9cc087d315ee2a274d3ef00623b304280017e5
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: ea5ef3722635484d23459d1d39ec6216d4574b85
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277240"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376910"
 ---
 # <a name="azure-notification-hubs-libraries-for-python"></a>適用於 Python 的 Azure 通知中樞程式庫
 
@@ -56,6 +56,7 @@ redis_client = NotificationHubsManagementClient(
 ## <a name="check-namespace-availability"></a>檢查命名空間可用性
 
 下列程式碼會檢查通知中樞的命名空間可用性。
+
 ```python
 from azure.mgmt.notificationhubs.models import CheckAvailabilityParameters
 

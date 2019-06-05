@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 80c9b90c9527503f9cc3782b429b4da1d4ff514f
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 3da9210dd14c19d591539656fb7229f4d3346ea9
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277002"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376884"
 ---
 # <a name="azure-devtest-labs-libraries-for-python"></a>適用於 Python 的 Azure DevTest Labs 程式庫
 
@@ -62,7 +62,7 @@ async_lab = self.client.lab.create_or_update_resource(
     {'location': 'westus'}
 )
 lab = async_lab.result() # Blocking wait
-``` 
+```
 
 > [!div class="nextstepaction"]
 > [探索管理 API](/python/api/overview/azure/devtestlabs/management)

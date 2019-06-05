@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 8709bbd3cff448c7beb394621b163a4b3e3c3cd8
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: ee562614e9745cdc38ae427728df16c117ff80cf
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276762"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376719"
 ---
 # <a name="azure-authorization-libraries-for-python"></a>適用於 Python 的 Azure 授權庫
 
@@ -51,12 +51,11 @@ authorization_client = AuthorizationManagementClient(
     credentials,
     subscription_id
 )
-``` 
+```
 
 ## <a name="check-permissions-for-a-resource-group"></a>檢查資源群組的權限
 
-下列程式碼會檢查指定資源群組中的權限。
-若要建立或管理資源群組，請參閱[資源管理](/python/api/overview/azure/azure.mgmt.resource)。
+下列程式碼會檢查指定資源群組中的權限。 若要建立或管理資源群組，請參閱[資源管理](/python/api/overview/azure/azure.mgmt.resource)。
 
 ```python
 from azure.mgmt.redis.models import Sku, RedisCreateOrUpdateParameters
@@ -70,4 +69,3 @@ permissions = self.authorization_client.permissions.list_for_resource_group(
 
 > [!div class="nextstepaction"]
 > [探索管理 API](/python/api/overview/azure/authorization/management)
-
