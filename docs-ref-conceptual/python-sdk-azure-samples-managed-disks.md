@@ -10,27 +10,25 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: 733bd0ffce6ddb10219dae40bad6ea54e1efcd70
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: bee17efdb90d6365acb2adbf9c01d1f7e843da42
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839403"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376852"
 ---
 # <a name="managed-disks"></a>受控磁碟
 
-Azure 受控磁碟和擴展集中的 1000 個現在已[上市](https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-managed-disks-and-larger-scale-sets/)，Azure 受控磁碟提供簡化的磁碟管理、增強的延展性、更佳的安全性和調整。 它不會採用磁碟的儲存體帳戶概念，讓使用者能夠進行調整，而無需擔心與儲存體帳戶相關聯的限制。 這篇文章會提供關於使用來自 Python 之服務的快速簡介和參考。
-
-
+Azure 受控磁碟提供簡化的磁碟管理、增強的延展性、更佳的安全性和調整。 它不會採用磁碟的儲存體帳戶概念，讓使用者能夠進行調整，而無需擔心與儲存體帳戶相關聯的限制。 這篇文章會提供關於使用來自 Python 之服務的快速簡介和參考。
 
 從開發人員的觀點而言，Azure CLI 中的受控磁碟體驗是其他跨平台工具的 CLI 體驗之慣用語。 您可以使用 [Azure Python](https://azure.microsoft.com/develop/python/) SDK 和 [azure-mgmt-compute 套件 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute) 來管理受控磁碟。 您可以使用此[教學課程](https://docs.microsoft.com/python/api/overview/azure/virtualmachines?view=azure-python)來建立計算用戶端。
-
 
 ## <a name="standalone-managed-disks"></a>獨立的受控磁碟
 
 您可以各種不同的方式輕鬆建立獨立的受控磁碟。
 
-### <a name="create-an-empty-managed-disk"></a>建立空的受控磁碟。
+### <a name="create-an-empty-managed-disk"></a>建立空的受控磁碟
+
 ```python
 from azure.mgmt.compute.models import DiskCreateOption
 
@@ -48,7 +46,8 @@ async_creation = compute_client.disks.create_or_update(
 disk_resource = async_creation.result()
 ```
 
-### <a name="create-a-managed-disk-from-blob-storage"></a>從 Blob 儲存體建立受控磁碟。
+### <a name="create-a-managed-disk-from-blob-storage"></a>從 Blob 儲存體建立受控磁碟
+
 ```python
 from azure.mgmt.compute.models import DiskCreateOption
 
@@ -67,6 +66,7 @@ disk_resource = async_creation.result()
 ```
 
 ### <a name="create-a-managed-disk-from-your-own-image"></a>從您自己的映像建立受控磁碟
+
 ```python
 from azure.mgmt.compute.models import DiskCreateOption
 
@@ -102,10 +102,12 @@ storage_profile = azure.mgmt.compute.models.StorageProfile(
         version='latest'
     )
 )
-``` 
+```
+
 這個 ``storage_profile`` 參數現在是有效的。 若要取得有關如何在 Python (包括網路等等) 中建立 VM 的完整範例，請查看完整的 [Python 中 VM 教學課程](https://github.com/Azure-Samples/virtual-machines-python-manage)。
 
 您可以輕鬆地連結先前已佈建的受控磁碟。
+
 ```python
 vm = compute.virtual_machines.get(
     'my_resource_group',
@@ -196,11 +198,11 @@ result_create = compute_client.virtual_machine_scale_sets.create_or_update(
     vmss_parameters,
 )
 vmss_result = result_create.result()
-``` 
+```
 
 ## <a name="other-operations-with-managed-disks"></a>使用受控磁碟的其他作業
 
-### <a name="resizing-a-managed-disk"></a>調整受控磁碟大小。
+### <a name="resizing-a-managed-disk"></a>調整受控磁碟大小
 
 ```python
 managed_disk = compute_client.disks.get('my_resource_group', 'myDisk')
@@ -213,7 +215,8 @@ async_update = self.compute_client.disks.create_or_update(
 async_update.wait()
 ```
 
-### <a name="update-the-storage-account-type-of-the-managed-disks"></a>更新受控磁碟的儲存體帳戶類型。
+### <a name="update-the-storage-account-type-of-the-managed-disks"></a>更新受控磁碟的儲存體帳戶類型
+
 ```python
 from azure.mgmt.compute.models import StorageAccountTypes
 
@@ -227,7 +230,8 @@ async_update = self.compute_client.disks.create_or_update(
 async_update.wait()
 ```
 
-### <a name="create-an-image-from-blob-storage"></a>從 Blob 儲存體建立映像。
+### <a name="create-an-image-from-nlob-storage"></a>從 Blob 儲存體建立映像
+
 ```python
 async_create_image = compute_client.images.create_or_update(
     'my_resource_group',
@@ -247,7 +251,8 @@ async_create_image = compute_client.images.create_or_update(
 image = async_create_image.result()
 ```
 
-### <a name="create-a-snapshot-of-a-managed-disk-that-is-currently-attached-to-a-virtual-machine"></a>建立目前連結至虛擬機器的受控磁碟快照集。
+### <a name="create-a-snapshot-of-a-managed-disk-that-is-currently-attached-to-a-virtual-machine"></a>建立目前連結至虛擬機器的受控磁碟快照集
+
 ```python
 managed_disk = compute_client.disks.get('my_resource_group', 'myDisk')
 async_snapshot_creation = self.compute_client.snapshots.create_or_update(
