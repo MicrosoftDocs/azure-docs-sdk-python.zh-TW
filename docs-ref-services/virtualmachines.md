@@ -3,7 +3,7 @@ title: 適用於 Python 的 Azure 虛擬機器程式庫
 description: ''
 keywords: Azure, Python, SDK, API, 計算, 虛擬機器
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/09/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: 78750d5f98ab81401c48493aff98d4268c01850d
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: e09ffed98f3f6050e34ca2cb39e645e30f8bdb15
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376708"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534182"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 虛擬機器程式庫
 
@@ -77,7 +77,7 @@ def create_vm()
 ## <a name="samples"></a>範例
 
 * [管理虛擬機器][1]
-* [使用受控服務身分識別進行驗證][2]
+* [使用受控服務識別進行驗證][2]
 * [使用受控服務識別延伸模組來建立虛擬機器][3]
 * [管理負載平衡器][4]
 * [建立及設定受控磁碟][5]

@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 88df9443efb98bc5cec26c5eb4b01a4956141d40
-ms.sourcegitcommit: 1b45953f168cbf36869c24c1741d70153b88b9fc
+ms.openlocfilehash: 19e0e629253462f77d58740857b853d1c94d53cf
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59675933"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534326"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>適用於 Python 的 Azure 容器執行個體程式庫
 
@@ -54,7 +54,7 @@ pip install azure-mgmt-containerinstance
    export AZURE_AUTH_LOCATION=/home/yourusername/my.azureauth
    ```
 
-一旦您建立了認證檔案，並填入 `AZURE_AUTH_LOCATION` 環境變數後，請使用 [client_factory][client_factory] 模組的 `get_client_from_auth_file` 方法來初始化 [ResourceManagementClient][ResourceManagementClient] 和 [ContainerInstanceManagementClient][ContainerInstanceManagementClient] 物件。
+一旦您建立了認證檔案，並填入 `AZURE_AUTH_LOCATION` 環境變數後，請使用 [client_factory][client_factory]module to initialize the [ResourceManagementClient][ResourceManagementClient] 和 [ContainerInstanceManagementClient][ContainerInstanceManagementClient] 物件的 `get_client_from_auth_file` 方法。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
@@ -79,7 +79,7 @@ pip install azure-mgmt-containerinstance
 
 此範例會建立一個容器群組搭配單一工作型容器。 此範例會示範多個功能：
 
-* [命令列覆寫](/azure/container-instances/container-instances-restart-policy#command-line-override) - 指定自訂命令列，但這不同於在容器 Dockerfile `CMD` 列中指定的內容。 命令列覆寫可讓您指定容器啟動時要執行的自訂命令列，並覆寫容器中內建的預設命令列。 關於要在容器啟動時執行多個命令，適用下列方式：
+* [命令列覆寫](/azure/container-instances/container-instances-start-command) - 指定自訂命令列，但這不同於在容器 Dockerfile `CMD` 列中指定的內容。 命令列覆寫可讓您指定容器啟動時要執行的自訂命令列，並覆寫容器中內建的預設命令列。 關於要在容器啟動時執行多個命令，適用下列方式：
 
    如果您想要使用數個命令列引數執行**單一命令**，例如 `echo FOO BAR`，則必須將其以字串清單方式提供給[容器][Container]的 `command` 屬性。 例如︰
 
@@ -108,7 +108,7 @@ pip install azure-mgmt-containerinstance
 
 此範例會從資源群組中取得特定容器群組，且會列印出這些容器群組的屬性 (包括其容器) 和值。
 
-[取得作業][containergroupoperations_get]會傳回已填入 [instance_view][instance_view] 的容器群組，這可讓您逐一查看群組中的每個容器。 只有 `get` 作業會填入容器群組的 `instance_vew` 屬性 - 列出訂用帳戶或資源群組中的容器群組並不會填入執行個體檢視，因為此作業的本質可能相當耗費資源 (例如列出數百個容器群組時，每個容器群組可能包含多個容器)。 如同之前在＜[列出容器群組](#list-container-groups)＞一節中所述，執行 `list` 之後，您必須接著 `get` 特定容器群組，才能取得其中容器執行個體的詳細資料。
+[取得作業][containergroupoperations_get] returns a container group with its [instance_view][instance_view]已填入，這可讓您逐一查看群組中的每個容器。 只有 `get` 作業會填入容器群組的 `instance_vew` 屬性 - 列出訂用帳戶或資源群組中的容器群組並不會填入執行個體檢視，因為此作業的本質可能相當耗費資源 (例如列出數百個容器群組時，每個容器群組可能包含多個容器)。 如同之前在＜[列出容器群組](#list-container-groups)＞一節中所述，執行 `list` 之後，您必須接著 `get` 特定容器群組，才能取得其中容器執行個體的詳細資料。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L296-L325 "Get container group")]
@@ -145,7 +145,7 @@ pip install azure-mgmt-containerinstance
 [client_factory]: /python/api/azure.common.client_factory
 [Container]: /python/api/azure.mgmt.containerinstance.models.container
 [ContainerGroupInstanceView]: /python/api/azure.mgmt.containerinstance.models.containergrouppropertiesinstanceview
-[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get
+[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get-resource-group-name--container-group-name--custom-headers-none--raw-false----operation-config-
 [ContainerInstanceManagementClient]: /python/api/azure.mgmt.containerinstance.containerinstancemanagementclient
 [instance_view]: /python/api/azure.mgmt.containerinstance.models.containergroup#variables
 [ResourceManagementClient]: /python/api/azure.mgmt.resource.resources.resourcemanagementclient
