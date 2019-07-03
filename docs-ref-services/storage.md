@@ -3,7 +3,7 @@ title: 適用於 Python 的 Azure 儲存體程式庫
 description: ''
 keywords: Azure, Python, SDK, API, 儲存體
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/12/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: storage
-ms.openlocfilehash: 5b4d4cc2dfb32dceb66bdb5be3fe0f0075840d8f
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: 1cafbe5558c49e238182b7efabeae6fcb96d43d8
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376755"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534199"
 ---
 # <a name="azure-storage-libraries-for-python"></a>適用於 Python 的 Azure 儲存體程式庫
 

@@ -2,18 +2,18 @@
 title: 適用於 Python 的 Azure SQL Database 程式庫
 description: 使用管理 API 透過 JDBC 驅動程式或管理 Azure SQL 執行個體來連線到 Azure SQL 資料庫。
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: 5b73977fb58ed3cb17d675784da921b0e199d165
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: 9b8a5b120425fc600f34c1e4c4456b0888814fe8
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901351"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534204"
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>適用於 Python 的 Azure SQL Database 程式庫
 
@@ -26,7 +26,7 @@ ms.locfileid: "33901351"
 ```bash
 pip install pyodbc
 ```
-可在[這裡](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)找到更多關於安裝 Python 和資料庫通訊程式庫的詳細資料。
+可在[這裡](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites)找到更多關於安裝 Python 和資料庫通訊程式庫的詳細資料。
 
 ## <a name="connect-and-execute-a-sql-query"></a>連線和執行 SQL 查詢
 
@@ -60,7 +60,7 @@ while row:
 
 ## <a name="connecting-to-orms"></a>連線至 ORM
 
-pyodbc 可搭配其他 ORM，例如 [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) 和 [Django](https://github.com/lionheart/django-pyodbc/)。 
+pyodbc 可搭配其他 ORM，例如 [SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) 和 [Django](https://github.com/lionheart/django-pyodbc/)。 
 
 ## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[管理 API](/python/api/overview/azure/sql/management)
 

@@ -3,18 +3,18 @@ title: 適用於 Python 的 Azure 事件格線程式庫
 description: ''
 keywords: Azure, Python, SDK, API, 事件格線
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: e5df1078116f13f959923eac3e0c7b5789545278
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276832"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534291"
 ---
 # <a name="event-grid-libraries-for-python"></a>適用於 Python 的 Event Grid 程式庫
 
@@ -88,7 +88,7 @@ pip install azure-mgmt-eventgrid
 ### <a name="example"></a>範例
 
 下列程式碼會建立一個自訂主題，並訂閱主題端點。 接著，程式碼會透過 HTTPS 將事件傳送至主題。
-RequestBin 是一個開放原始碼的第三方工具，可讓您建立端點，以及檢視傳送給它的要求。 移至 [RequestBin](https://requestb.in/)，然後按一下 [建立 RequestBin]。 複製 bin URL，因為您在訂閱主題時需要用到它。
+RequestBin 是一個開放原始碼的第三方工具，可讓您建立端點，以及檢視傳送給它的要求。 移至 [RequestBin](https://requestbin.com)，然後按一下 [建立 RequestBin]  。 複製 bin URL，因為您在訂閱主題時需要用到它。
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient

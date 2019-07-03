@@ -3,7 +3,7 @@ title: 版本資訊
 description: 了解適用於 Python 之 Azure 管理程式庫的最新消息和重大變更
 keywords: Azure, Python, SDK, API
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/05/2017
 ms.topic: install
@@ -12,12 +12,12 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: ''
-ms.openlocfilehash: b6ab1ec334b116a2ef8e8cb416501ad4e7fc63b9
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: faef505593e82ffc6676efd6dc8ed83ee3784fae
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52272924"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534447"
 ---
 # <a name="release-notes"></a>版本資訊
 
